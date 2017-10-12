@@ -1,0 +1,46 @@
+{
+  "name": "coolriver-site",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "serverProd": "cross-env NODE_ENV=production node build/server.js",
+    "serverDev": "cross-env BACKPACK_ENTRY=server backpack dev",
+    "syncArticle": "cross-env BACKPACK_ENTRY=sync-article backpack dev",
+    "serverBuild": "backpack build",
+    "dev": "nuxt",
+    "build": "nuxt build && backpack build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "keywords": [],
+  "author": "coolriver <670644959@qq.com>",
+  "license": "ISC",
+  "dependencies": {
+    "axios": "^0.16.2",
+    "backpack-core": "^0.4.2",
+    "github-markdown-css": "^2.8.0",
+    "highlight-loader": "^0.7.2",
+    "highlight.js": "^9.12.0",
+    "koa": "^2.3.0",
+    "koa-connect": "^2.0.0",
+    "koa-router": "^7.2.1",
+    "koa2-connect": "^1.0.2",
+    "koa2-cors": "^2.0.3",
+    "lowdb": "^1.0.0",
+    "markdown-code-highlight-loader": "^1.0.1",
+    "markdown-loader": "^2.0.0",
+    "marked": "^0.3.6",
+    "mdi": "^2.0.46",
+    "nuxt": "^1.0.0-rc9",
+    "raw-loader": "^0.5.1",
+    "shortid": "^2.2.8",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^2.4.0",
+    "vuetify": "^0.15.2"
+  },
+  "devDependencies": {
+    "cross-env": "^5.0.5",
+    "walk": "^2.3.9"
+  }
+}
