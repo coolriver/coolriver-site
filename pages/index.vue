@@ -19,7 +19,7 @@ import axios from 'axios';
 
 export default {
   async asyncData({ params, err, req }) {
-    const url = req ? 'http://localhost/api/article/list' : '/api/article/list';
+    const url = req ? 'http://coolriver.net.cn/api/article/list' : '/api/article/list';
     const result = await axios.get(url);
     return {
       list: result.data

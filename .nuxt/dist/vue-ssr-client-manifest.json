@@ -1,12 +1,12 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.d2012f23120e5273924e.js",
+    "manifest.f7cc7d79b7fbfea7f7f0.js",
     "fonts/materialdesignicons-webfont.9b9f2c4.woff2",
     "fonts/materialdesignicons-webfont.3ef6639.ttf",
     "fonts/materialdesignicons-webfont.f89ba2d.svg",
     "fonts/materialdesignicons-webfont.3bd364e.eot",
-    "pages\\index.13c2e296ca25472b23e1.js",
+    "pages\\index.774977166f3c2c1b05c4.js",
     "layouts\\default.813cd324b80d6cc8a878.js",
     "pages\\articles\\_article.d96c4f07069754f26d9b.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
@@ -16,7 +16,7 @@
     "7.fced5dcae9549b6ef422.js",
     "fonts/materialdesignicons-webfont.eec7f0f.woff",
     "LICENSES",
-    "pages\\index.13c2e296ca25472b23e1.js.map",
+    "pages\\index.774977166f3c2c1b05c4.js.map",
     "layouts\\default.813cd324b80d6cc8a878.js.map",
     "pages\\articles\\_article.d96c4f07069754f26d9b.js.map",
     "pages\\about.1c0ff33f45b31dbb9ff3.js.map",
@@ -24,17 +24,17 @@
     "common.1a9f32ebeea998585ad0.js.map",
     "6.c231a1f9d72b6d19487b.js.map",
     "7.fced5dcae9549b6ef422.js.map",
-    "manifest.d2012f23120e5273924e.js.map",
+    "manifest.f7cc7d79b7fbfea7f7f0.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.d2012f23120e5273924e.js",
+    "manifest.f7cc7d79b7fbfea7f7f0.js",
     "common.1a9f32ebeea998585ad0.js",
     "app.b7de9b300514f0d2f207.js"
   ],
   "async": [
-    "pages\\index.13c2e296ca25472b23e1.js",
+    "pages\\index.774977166f3c2c1b05c4.js",
     "layouts\\default.813cd324b80d6cc8a878.js",
     "pages\\articles\\_article.d96c4f07069754f26d9b.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
