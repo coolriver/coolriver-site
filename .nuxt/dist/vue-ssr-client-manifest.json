@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.634388a07c104e762549.js",
+    "manifest.5068ab590e4de2561bcc.js",
     "fonts/materialdesignicons-webfont.9b9f2c4.woff2",
     "fonts/materialdesignicons-webfont.3ef6639.ttf",
     "fonts/materialdesignicons-webfont.f89ba2d.svg",
@@ -10,7 +10,7 @@
     "layouts\\default.813cd324b80d6cc8a878.js",
     "pages\\articles\\_article.6d14330f9e6c7a9bba1f.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
-    "app.b7de9b300514f0d2f207.js",
+    "app.08f24f0ad1bdf4a25ef8.js",
     "common.1a9f32ebeea998585ad0.js",
     "6.c231a1f9d72b6d19487b.js",
     "7.fced5dcae9549b6ef422.js",
@@ -20,18 +20,18 @@
     "layouts\\default.813cd324b80d6cc8a878.js.map",
     "pages\\articles\\_article.6d14330f9e6c7a9bba1f.js.map",
     "pages\\about.1c0ff33f45b31dbb9ff3.js.map",
-    "app.b7de9b300514f0d2f207.js.map",
+    "app.08f24f0ad1bdf4a25ef8.js.map",
     "common.1a9f32ebeea998585ad0.js.map",
     "6.c231a1f9d72b6d19487b.js.map",
     "7.fced5dcae9549b6ef422.js.map",
-    "manifest.634388a07c104e762549.js.map",
+    "manifest.5068ab590e4de2561bcc.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.634388a07c104e762549.js",
+    "manifest.5068ab590e4de2561bcc.js",
     "common.1a9f32ebeea998585ad0.js",
-    "app.b7de9b300514f0d2f207.js"
+    "app.08f24f0ad1bdf4a25ef8.js"
   ],
   "async": [
     "pages\\index.774977166f3c2c1b05c4.js",
