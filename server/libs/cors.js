@@ -9,7 +9,8 @@ const whiteDomain = [
 export default function setupCors (app) {
   app.use(cors({
     origin: (ctx) => {
-      return '*';
+      // return '*';
+      console.log(ctx.hostname);
       if (whiteDomain.indexOf(ctx.hostname) >= 0) {
         return ctx.origin;
       }
