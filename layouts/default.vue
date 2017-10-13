@@ -1,7 +1,9 @@
 <template>
   <v-app id="example-2" light>
     <v-toolbar class="cyan darken" dark fixed>
-      <nuxt-link to="/"><v-toolbar-title class="home-title">coolriver</v-toolbar-title></nuxt-link>
+      <nuxt-link to="/">
+        <v-toolbar-title class="home-title">coolriver</v-toolbar-title>
+      </nuxt-link>
       <v-spacer></v-spacer>
     </v-toolbar>
     <main>
@@ -51,10 +53,10 @@ export default {
     };
   },
   created() {
-/*     return axios.get('/api/article/list')
-      .then((res) => {
-        this.list = res.data;
-      }); */
+    /*     return axios.get('/api/article/list')
+          .then((res) => {
+            this.list = res.data;
+          }); */
   }
 }
 </script>
@@ -64,7 +66,7 @@ export default {
   color: #fff;
 }
 
-.aside > .layout {
+.aside>.layout {
   position: sticky;
   top: 76px;
 }
@@ -77,6 +79,22 @@ export default {
   text-align: center;
   padding: 20px 0;
   height: auto;
+}
+
+.container>.layout {
+  min-height: 100vh;
+}
+
+@media (min-width: 0) {
+  .container>.layout {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 960px) {
+  .container>.layout {
+    min-height: 100vh;
+  }
 }
 </style>
 
