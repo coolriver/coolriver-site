@@ -2891,6 +2891,10 @@ koa-router@^7.2.1:
     methods "^1.0.1"
     path-to-regexp "^1.1.1"
 
+koa-sslify@^2.1.2:
+  version "2.1.2"
+  resolved "https://registry.yarnpkg.com/koa-sslify/-/koa-sslify-2.1.2.tgz#8947fd53949d69d539607814097863c1ecf38f30"
+
 koa2-connect@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/koa2-connect/-/koa2-connect-1.0.2.tgz#cf196d70a4e6a055f717522768d26cdfc5396f7b"

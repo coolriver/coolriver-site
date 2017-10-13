@@ -1,5 +1,10 @@
 
 import Koa from 'koa';
+import enforceHttps from'koa-sslify';
+import http from 'http';
+import https from 'https';
+import path from 'path';
+import fs from 'fs';
 import { Nuxt, Builder } from 'nuxt';
 import { DB } from './db/index';
 import setupRouter from './router/router';
@@ -12,6 +17,11 @@ const port = process.env.PORT || 80;
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js');
 config.dev = !(app.env === 'production');
+
+// 正式环境下启用https
+if (!config.dev) {
+  app.use(enforceHttps());
+}
 
 // Instantiate nuxt.js
 const nuxt = new Nuxt(config);
@@ -41,5 +51,14 @@ app.use(ctx => {
   })
 })
 
-app.listen(port, '0.0.0.0');
+// app.listen(port, '0.0.0.0');
+http.createServer(app.callback()).listen(port);
+
+if (!config.dev) {
+  https.createServer({
+    key: fs.readFileSync(path.resolve(__dirname, './ssl/2_coolriver.net.cn.key')),
+    cert: fs.readFileSync(path.resolve(__dirname, './ssl/1_coolriver.net.cn_bundle.crt')),
+  }, app.callback()).listen(443);
+}
+
 console.log('Server listening on a ' + host + ':' + port); // eslint-disable-line no-console

@@ -25,6 +25,7 @@
     "koa": "^2.3.0",
     "koa-connect": "^2.0.0",
     "koa-router": "^7.2.1",
+    "koa-sslify": "^2.1.2",
     "koa2-connect": "^1.0.2",
     "koa2-cors": "^2.0.3",
     "lowdb": "^1.0.0",
