@@ -33,9 +33,9 @@ export function initComment() {
     c.appendChild(b)
   };
   if (width < 960) {
-    loadJs('http://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf, null, 'changyan_mobile_js');
+    loadJs('https://changyan.sohu.com/upload/mobile/wap-js/changyan_mobile.js?client_id=' + appid + '&conf=' + conf, null, 'changyan_mobile_js');
   } else {
-    loadJs("http://changyan.sohu.com/upload/changyan.js", function () {
+    loadJs("https://changyan.sohu.com/upload/changyan.js", function () {
       window.changyan.api.config({
         appid: appid,
         conf: conf
