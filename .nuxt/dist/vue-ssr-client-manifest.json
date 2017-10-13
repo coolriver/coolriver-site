@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.c3822172a66121f8f2be.js",
+    "manifest.719bb4af238affead176.js",
     "fonts/materialdesignicons-webfont.9b9f2c4.woff2",
     "fonts/materialdesignicons-webfont.3ef6639.ttf",
     "fonts/materialdesignicons-webfont.f89ba2d.svg",
@@ -24,12 +24,12 @@
     "common.1a9f32ebeea998585ad0.js.map",
     "6.c231a1f9d72b6d19487b.js.map",
     "7.fced5dcae9549b6ef422.js.map",
-    "manifest.c3822172a66121f8f2be.js.map",
+    "manifest.719bb4af238affead176.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.c3822172a66121f8f2be.js",
+    "manifest.719bb4af238affead176.js",
     "common.1a9f32ebeea998585ad0.js",
     "app.b7de9b300514f0d2f207.js"
   ],
