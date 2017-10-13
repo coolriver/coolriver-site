@@ -20,6 +20,7 @@ config.dev = !(app.env === 'production');
 
 // 正式环境下启用https
 if (!config.dev) {
+  console.log('enable https');
   app.use(enforceHttps());
 }
 

@@ -240,6 +240,7 @@ config.dev = !(app.env === 'production');
 
 // 正式环境下启用https
 if (!config.dev) {
+  console.log('enable https');
   app.use(__WEBPACK_IMPORTED_MODULE_1_koa_sslify___default()());
 }
 
@@ -432,7 +433,7 @@ module.exports = require("koa2-cors");
 
 module.exports = {
   head: {
-    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { name: "baidu-site-verification", content: "FOA7NtCzoq" }, { hid: "description", name: "description", content: "Meta description" }]
+    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { hid: "description", name: "description", content: "Meta description" }]
   },
   build: {
     extend: function extend(config) {
