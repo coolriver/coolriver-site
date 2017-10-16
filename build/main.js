@@ -330,7 +330,8 @@ module.exports = require("nuxt");
 var router = new __WEBPACK_IMPORTED_MODULE_0_koa_router___default.a();
 
 function setupRouter(app) {
-  router.get('/api/article/list', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["a" /* getList */]);
+  router.get('/api/articles', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["b" /* getList */]);
+  router.get('/api/articles/:name', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["a" /* find */]);
 
   app.use(router.routes());
 };
@@ -346,7 +347,8 @@ module.exports = require("koa-router");
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return getList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getList; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return find; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_index__ = __webpack_require__(3);
@@ -379,6 +381,31 @@ var getList = function () {
 
     return function getList(_x, _x2) {
         return _ref.apply(this, arguments);
+    };
+}();
+
+var find = function () {
+    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+        var article;
+        return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+            while (1) {
+                switch (_context2.prev = _context2.next) {
+                    case 0:
+                        article = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].find({ name: ctx.params.name });
+
+                        ctx.status = 200;
+                        ctx.body = article;
+
+                    case 3:
+                    case 'end':
+                        return _context2.stop();
+                }
+            }
+        }, _callee2, this);
+    }));
+
+    return function find(_x3, _x4) {
+        return _ref2.apply(this, arguments);
     };
 }();
 
@@ -433,7 +460,16 @@ module.exports = require("koa2-cors");
 
 module.exports = {
   head: {
-    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { hid: "description", name: "description", content: "Meta description" }]
+    meta: [{ charset: "utf-8" }, { name: "viewport", content: "width=device-width, initial-scale=1" }, { hid: "description", name: "description", content: "coolriver的个人博客站点" }, { hid: "keywords", name: "keywords", content: "coolriver,前端,博客" }, { hid: "shareimg", itemprop: "image", content: "https://coolriver.net.cn/avatar.jpg" }],
+    link: [{
+      rel: 'icon',
+      type: 'image/x-icon',
+      href: '/favicon.ico'
+    }],
+    script: [{
+      src: 'https://hm.baidu.com/hm.js?406ea27bfbb3000b689c8ab5f17ebb86'
+    }],
+    title: 'coolriver的空间'
   },
   build: {
     extend: function extend(config) {

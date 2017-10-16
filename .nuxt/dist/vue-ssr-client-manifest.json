@@ -1,44 +1,44 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "manifest.883f31aad0c0967204af.js",
+    "manifest.1cfe77c0e911cc14ed51.js",
     "fonts/materialdesignicons-webfont.9b9f2c4.woff2",
     "fonts/materialdesignicons-webfont.3ef6639.ttf",
     "fonts/materialdesignicons-webfont.f89ba2d.svg",
     "fonts/materialdesignicons-webfont.3bd364e.eot",
-    "pages\\index.c0624bb214789aa4dc38.js",
-    "layouts\\default.3526a351e7cc13995805.js",
-    "pages\\articles\\_article.f3a68e79afe321f301e3.js",
+    "pages\\articles\\_article.fe489b91f91eed56b156.js",
+    "pages\\index.d907526c1275e5137406.js",
+    "layouts\\default.85c26452db5db75bb309.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
-    "app.b7de9b300514f0d2f207.js",
+    "app.7fe8f703869024d5d416.js",
     "common.1a9f32ebeea998585ad0.js",
     "6.c231a1f9d72b6d19487b.js",
     "7.69f05d329327ff7fdcf5.js",
     "8.173ceb57c658d5126b86.js",
     "fonts/materialdesignicons-webfont.eec7f0f.woff",
     "LICENSES",
-    "pages\\index.c0624bb214789aa4dc38.js.map",
-    "layouts\\default.3526a351e7cc13995805.js.map",
-    "pages\\articles\\_article.f3a68e79afe321f301e3.js.map",
+    "pages\\articles\\_article.fe489b91f91eed56b156.js.map",
+    "pages\\index.d907526c1275e5137406.js.map",
+    "layouts\\default.85c26452db5db75bb309.js.map",
     "pages\\about.1c0ff33f45b31dbb9ff3.js.map",
-    "app.b7de9b300514f0d2f207.js.map",
+    "app.7fe8f703869024d5d416.js.map",
     "common.1a9f32ebeea998585ad0.js.map",
     "6.c231a1f9d72b6d19487b.js.map",
     "7.69f05d329327ff7fdcf5.js.map",
     "8.173ceb57c658d5126b86.js.map",
-    "manifest.883f31aad0c0967204af.js.map",
+    "manifest.1cfe77c0e911cc14ed51.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.883f31aad0c0967204af.js",
+    "manifest.1cfe77c0e911cc14ed51.js",
     "common.1a9f32ebeea998585ad0.js",
-    "app.b7de9b300514f0d2f207.js"
+    "app.7fe8f703869024d5d416.js"
   ],
   "async": [
-    "pages\\index.c0624bb214789aa4dc38.js",
-    "layouts\\default.3526a351e7cc13995805.js",
-    "pages\\articles\\_article.f3a68e79afe321f301e3.js",
+    "pages\\articles\\_article.fe489b91f91eed56b156.js",
+    "pages\\index.d907526c1275e5137406.js",
+    "layouts\\default.85c26452db5db75bb309.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
     "6.c231a1f9d72b6d19487b.js",
     "7.69f05d329327ff7fdcf5.js",
@@ -94,6 +94,10 @@
       3,
       4,
       4
+    ],
+    "65607530": [
+      5,
+      16
     ],
     "76304078": [
       9,
@@ -160,8 +164,8 @@
       21
     ],
     "3373d88e": [
-      5,
-      16
+      6,
+      17
     ],
     "25f5b254": [
       9,
@@ -321,6 +325,10 @@
       4,
       4
     ],
+    "0e752d14": [
+      5,
+      16
+    ],
     "9004f6da": [
       9,
       20,
@@ -420,6 +428,10 @@
       3,
       4,
       4
+    ],
+    "fc21d9f4": [
+      5,
+      16
     ],
     "3350665b": [
       9,
@@ -576,12 +588,12 @@
       4
     ],
     "2a413e94": [
-      6,
-      17
+      7,
+      18
     ],
     "61a36911": [
-      5,
-      16
+      6,
+      17
     ],
     "dba4a372": [
       9,
@@ -684,8 +696,8 @@
       4
     ],
     "5705076d": [
-      6,
-      17
+      7,
+      18
     ],
     "519163cc": [
       9,
@@ -758,8 +770,8 @@
       4
     ],
     "0a551867": [
-      5,
-      16
+      6,
+      17
     ],
     "6952e015": [
       9,
@@ -996,8 +1008,8 @@
       4
     ],
     "c796856e": [
-      6,
-      17
+      7,
+      18
     ],
     "acbf790a": [
       9,
@@ -1010,8 +1022,8 @@
       4
     ],
     "6371961e": [
-      7,
-      18
+      5,
+      16
     ],
     "1c61f54e": [
       9,
@@ -1064,12 +1076,12 @@
       4
     ],
     "e2f01e76": [
-      6,
-      17
-    ],
-    "0705af96": [
       7,
       18
+    ],
+    "0705af96": [
+      5,
+      16
     ],
     "de3efd6c": [
       9,
@@ -1120,6 +1132,10 @@
       3,
       4,
       4
+    ],
+    "1cc5cb09": [
+      5,
+      16
     ],
     "4fdc1e8c": [
       9,
@@ -1172,8 +1188,8 @@
       4
     ],
     "65cf61e3": [
-      7,
-      18
+      5,
+      16
     ],
     "3f6be2a1": [
       9,
@@ -1220,8 +1236,8 @@
       4
     ],
     "9d6a7396": [
-      7,
-      18
+      5,
+      16
     ],
     "afdaf59c": [
       9,
@@ -1242,6 +1258,14 @@
       3,
       4,
       4
+    ],
+    "982bb0f8": [
+      5,
+      16
+    ],
+    "e5b88804": [
+      5,
+      16
     ],
     "d8c1ced6": [
       9,
@@ -1264,8 +1288,8 @@
       4
     ],
     "498a9646": [
-      7,
-      18
+      5,
+      16
     ],
     "df107628": [
       9,
@@ -1302,8 +1326,8 @@
       19
     ],
     "a5570914": [
-      7,
-      18
+      5,
+      16
     ],
     "07782e18": [
       9,
@@ -1524,8 +1548,8 @@
       4
     ],
     "2ee70b58": [
-      5,
-      16
+      6,
+      17
     ],
     "2cb4db26": [
       9,
@@ -1538,8 +1562,8 @@
       4
     ],
     "2593ebb5": [
-      6,
-      17
+      7,
+      18
     ],
     "7151324a": [
       9,
@@ -1552,8 +1576,8 @@
       4
     ],
     "385f2908": [
-      7,
-      18
+      5,
+      16
     ],
     "2ea586e5": [
       10,
@@ -1599,6 +1623,10 @@
       4,
       4
     ],
+    "112f116e": [
+      5,
+      16
+    ],
     "058a44d8": [
       9,
       20,
@@ -1630,8 +1658,8 @@
       4
     ],
     "4fff276f": [
-      5,
-      16
+      6,
+      17
     ],
     "41eb8e4c": [
       8,

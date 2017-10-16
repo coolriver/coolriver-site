@@ -6,3 +6,9 @@ export async function getList(ctx, next) {
     ctx.body = list;
     // next();
 }
+
+export async function find (ctx, next) {
+  const article = articleModel.find({ name: ctx.params.name });
+  ctx.status = 200;
+  ctx.body = article;
+}
