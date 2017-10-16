@@ -6,9 +6,6 @@ import { parseTags, parseDesc, parseImage, parseTitle } from './libs/mdParser';
 
 const mdDir = path.resolve(__dirname, '../markdown/');
 
-
-console.log(mdDir);
-
 // articleModel.addOrUpdateArticle('test');
 
 function walkMd() {
@@ -37,18 +34,10 @@ function walkMd() {
       });
 
       next();
-
-      console.log(articleModel.getList((item) => {
-        return item.time > 0;
-      }));
     });
   });
 }
 
 walkMd();
-
-console.log(articleModel.getList((item) => {
-  return item.time > 0;
-}));
 
 console.log('sync article done');

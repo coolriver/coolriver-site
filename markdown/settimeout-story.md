@@ -1,6 +1,6 @@
 <!--TAG javascript /TAG-->
 <!--DESC 关于setTimeout的一些理解，老鸟可绕道 /DESC-->
-# setTimeout的那些事
+# setTimeout的那些事儿
 >如果懂setTimeout，可以直接看第3节，前面两节也可以当段子看一下。
 >如果不是很懂setTimeout，看下1，2两节应该会有一些收获。
 

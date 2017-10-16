@@ -25,14 +25,14 @@
       "time": 1504259901206
     },
     {
-      "title": "setTimeout的那些事\n>如果懂setTimeout，可以直接看第3节，前面两节也可以当段子看一下。\n>如果不是很懂setTimeout，看下1，2两节应该会有一些收获。",
+      "title": "setTimeout的那些事儿",
       "img": "default_img",
       "desc": "关于setTimeout的一些理解，老鸟可绕道 ",
       "tags": [
         "javascript "
       ],
       "name": "settimeout-story",
-      "id": "BJUp5ZAn-",
+      "id": "rkIc1i-ab",
       "time": 1507887704128
     }
   ],

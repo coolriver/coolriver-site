@@ -48,9 +48,10 @@ export function parseImage (content) {
  * @returns {String} 文章标题
  */
 export function parseTitle (content) {
-  const TITLE_REG = /^#([^#]+)$/m;
+  const TITLE_REG = /^#(.+)$/m;
   const matches = content.match(TITLE_REG) || [];
   const title = matches[1] && matches[1].trim() || '未知标题';
 
+  console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@' + title);
   return title;
 }

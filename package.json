@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "serverProd": "cross-env NODE_ENV=production node build/server.js",
+    "syncData": "node build/syncArticle.js",
     "serverDev": "cross-env BACKPACK_ENTRY=server backpack dev",
     "syncArticle": "cross-env BACKPACK_ENTRY=sync-article backpack dev",
     "serverBuild": "backpack build",

@@ -162,16 +162,16 @@ function insertOrUpdate(_ref) {
     tags: tags,
     name: name
   };
-  var articleFind = find({ name: name });
+  var articleFind = articleModel.find({ name: name });
 
-  if (!articleFind) {
+  if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
     articleModel.push(Object.assign({}, data, {
       id: __WEBPACK_IMPORTED_MODULE_1_shortid___default.a.generate(),
       time: +time
     })).write();
   } else {
-    articleModel.assign(data).write();
+    articleFind.assign(data).write();
   }
 };
 
@@ -231,8 +231,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var mdDir = __WEBPACK_IMPORTED_MODULE_0_path___default.a.resolve(__dirname, '../markdown/');
 
-console.log(mdDir);
-
 // articleModel.addOrUpdateArticle('test');
 
 function walkMd() {
@@ -261,19 +259,11 @@ function walkMd() {
       });
 
       next();
-
-      console.log(__WEBPACK_IMPORTED_MODULE_3__models_index__["a" /* articleModel */].getList(function (item) {
-        return item.time > 0;
-      }));
     });
   });
 }
 
 walkMd();
-
-console.log(__WEBPACK_IMPORTED_MODULE_3__models_index__["a" /* articleModel */].getList(function (item) {
-  return item.time > 0;
-}));
 
 console.log('sync article done');
 /* WEBPACK VAR INJECTION */}.call(__webpack_exports__, "server"))
@@ -343,10 +333,11 @@ function parseImage(content) {
  * @returns {String} 文章标题
  */
 function parseTitle(content) {
-  var TITLE_REG = /^#([^#]+)$/m;
+  var TITLE_REG = /^#(.+)$/m;
   var matches = content.match(TITLE_REG) || [];
   var title = matches[1] && matches[1].trim() || '未知标题';
 
+  console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@' + title);
   return title;
 }
 

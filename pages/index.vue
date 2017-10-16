@@ -1,6 +1,6 @@
 <template>
   <v-layout wrap>
-    <v-flex d-flex v-for="(item, index) in list" :key="index" xs12 md6 lg4>
+    <v-flex class="article-card" d-flex v-for="(item, index) in list" :key="index" xs12 md6 lg4>
       <nuxt-link :to="`/articles/${item.name}`" v-if="true">
         <v-card hover>
           <v-card-media height="190px" :src="item.img">
@@ -36,8 +36,16 @@ export default {
 };
 </script>
 
-<style>
+<style scoped>
+.article-card>a {
+  width: 100%;
+}
 
+.card__text {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 </style>
 
 

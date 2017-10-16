@@ -12,16 +12,16 @@ export function insertOrUpdate({ title, time, img, desc, tags, name }) {
     tags,
     name
   };
-  const articleFind = find({ name });
+  const articleFind = articleModel.find({ name });
 
-  if (!articleFind) {
+  if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
     articleModel.push(Object.assign({}, data, {
       id: shortid.generate(),
       time: +time,
     })).write();
   } else {
-    articleModel.assign(data).write();
+    articleFind.assign(data).write();
   }
 };
 

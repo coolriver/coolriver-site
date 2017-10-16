@@ -162,16 +162,16 @@ function insertOrUpdate(_ref) {
     tags: tags,
     name: name
   };
-  var articleFind = find({ name: name });
+  var articleFind = articleModel.find({ name: name });
 
-  if (!articleFind) {
+  if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
     articleModel.push(Object.assign({}, data, {
       id: __WEBPACK_IMPORTED_MODULE_1_shortid___default.a.generate(),
       time: +time
     })).write();
   } else {
-    articleModel.assign(data).write();
+    articleFind.assign(data).write();
   }
 };
 
