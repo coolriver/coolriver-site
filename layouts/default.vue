@@ -8,7 +8,7 @@
     </v-toolbar>
     <main>
       <embed class="svg-bg" :src="chilunSvg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
-      <v-container grid-list-md mt-2>
+      <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs12 md9 order-xs2 order-md3>
             <nuxt/>
@@ -128,11 +128,27 @@ export default {
   .container>.layout {
     min-height: 0;
   }
+
+  .container.grid-list-md {
+    padding: 0;
+  }
+
+  .container {
+    margin-top: 0;
+  }
 }
 
 @media (min-width: 960px) {
   .container>.layout {
     min-height: 100vh;
+  }
+
+  .container.grid-list-md {
+    padding: 8px;
+  }
+
+  .container {
+    margin-top: 8px;
   }
 }
 </style>
