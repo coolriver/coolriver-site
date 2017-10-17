@@ -1,6 +1,7 @@
 <template>
   <div>
     <!-- <h1>{{env}}</h1> -->
+    <v-icon>mdi-rowing</v-icon>
     <div class="markdown-body" v-html="content"></div>
     <!--PC和WAP自适应版-->
     <div id="SOHUCS" :sid="metaData.id"></div>
@@ -19,7 +20,6 @@ const sleep = function(time) {
 
 export default {
   async asyncData({ params, error, req }) {
-    // const content = await import(`../../markdown/${params.article}.md`);
     const { article } = params;
     const articleDataUrl = req ? `http://coolriver.net.cn/api/articles/${article}` : `/api/articles/${article}`;
     const [ content, articleData ] = await Promise.all([
@@ -68,6 +68,12 @@ export default {
 .markdown-body {
   background: #fff;
   padding: 20px;
+}
+
+#SOHUCS {
+  background: #fff;
+  padding: 20px;
+  margin: 20px 0;
 }
 </style>
 
