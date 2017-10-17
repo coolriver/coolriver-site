@@ -41,7 +41,7 @@
       <span class="white--text ml-3 hidden-xs-only">粤ICP备16047967号-1</span>
     </v-footer>
     <v-fab-transition>
-      <v-btn fixed dark floating fab bottom right class="red" v-show="showSrollTop" @click="scrollTop">
+      <v-btn fixed dark floating fab bottom right class="red scroll-btn" v-show="showSrollTop" @click="scrollTop">
         <v-icon>mdi-chevron-up</v-icon>
       </v-btn>
     </v-fab-transition>
@@ -117,6 +117,11 @@ export default {
 
 .container>.layout {
   min-height: 100vh;
+}
+
+.scroll-btn {
+  bottom: 32px;
+  z-index: 1000;
 }
 
 @media (min-width: 0) {
