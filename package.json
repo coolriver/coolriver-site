@@ -43,6 +43,7 @@
   },
   "devDependencies": {
     "cross-env": "^5.0.5",
+    "svg-url-loader": "^2.2.0",
     "walk": "^2.3.9"
   }
 }

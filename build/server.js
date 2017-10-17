@@ -473,29 +473,23 @@ module.exports = {
   },
   build: {
     extend: function extend(config) {
+      var imageLoaderConf = config.module.rules.find(function (item) {
+        return item.test.toString().indexOf('|svg') >= 0;
+      });
+
+      imageLoaderConf.test = /\.(png|jpe?g|gif)$/;
+
       config.module.rules = config.module.rules.concat([{
         test: /\.md$/,
         loaders: ["raw-loader", "markdown-code-highlight-loader"]
       }, {
-        test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-        loader: "url-loader",
-        query: {
-          limit: 1000, // 1 KO
-          name: "fonts/[name].[hash:7].[ext]"
+        test: /\.svg$/,
+        loader: 'svg-url-loader',
+        options: {
+          limit: 1000
         }
       }]);
-    },
-    loaders: [{
-      test: /\.md$/,
-      loaders: ["raw-loader", "markdown-code-highlight-loader"]
-    }, {
-      test: /\.(woff2?|eot|ttf|otf|svg)(\?.*)?$/,
-      loader: "url-loader",
-      query: {
-        limit: 1000, // 1 KO
-        name: "fonts/[name].[hash:7].[ext]"
-      }
-    }]
+    }
   },
   css: ["vuetify/dist/vuetify.css", "~assets/css/common.css", "mdi/css/materialdesignicons.css", "highlight.js/styles/atom-one-dark.css", "github-markdown-css/github-markdown.css"],
   plugins: ["~plugins/vue-vuetify"],

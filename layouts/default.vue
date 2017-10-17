@@ -7,12 +7,13 @@
       <v-spacer></v-spacer>
     </v-toolbar>
     <main>
+      <embed class="svg-bg" :src="chilunSvg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
       <v-container grid-list-md mt-2>
         <v-layout row wrap>
           <v-flex xs12 md9 order-xs2 order-md3>
             <nuxt/>
           </v-flex>
-          <v-flex xs12 md3 order-xs1 order-md4 class="aside">
+          <v-flex xs12 md3 order-xs3 order-md4 class="aside">
             <v-layout row wrap>
               <v-flex xs12>
                 <v-card hover>
@@ -44,12 +45,14 @@
 
 <script>
 import axios from 'axios';
+const chilunSvg = require('../assets/image/chilun.svg');
 
 export default {
   name: 'default-layout',
   data() {
     return {
       drawer: true,
+      chilunSvg
     };
   },
   created() {
@@ -62,6 +65,11 @@ export default {
 </script>
 
 <style scoped>
+.svg-bg {
+  position: fixed;
+  z-index: 0;
+}
+
 .home-title {
   color: #fff;
 }
@@ -79,6 +87,10 @@ export default {
   text-align: center;
   padding: 20px 0;
   height: auto;
+}
+
+.container {
+  position: relative;
 }
 
 .container>.layout {
