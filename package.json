@@ -29,6 +29,7 @@
     "koa-sslify": "^2.1.2",
     "koa2-connect": "^1.0.2",
     "koa2-cors": "^2.0.3",
+    "lodash": "^4.17.4",
     "lowdb": "^1.0.0",
     "markdown-code-highlight-loader": "^1.0.1",
     "markdown-loader": "^2.0.0",

@@ -40,26 +40,48 @@
       <span class="white--text">Copyright © 2017 coolriver</span>
       <span class="white--text ml-3 hidden-xs-only">粤ICP备16047967号-1</span>
     </v-footer>
+    <v-fab-transition>
+      <v-btn fixed dark floating fab bottom right class="red" v-show="showSrollTop" @click="scrollTop">
+        <v-icon>mdi-chevron-up</v-icon>
+      </v-btn>
+    </v-fab-transition>
   </v-app>
 </template>
 
 <script>
 import axios from 'axios';
+import _ from 'lodash';
 const chilunSvg = require('../assets/image/chilun.svg');
+
+const SCROLL_TOP = 100;
+let doc = null;
 
 export default {
   name: 'default-layout',
   data() {
     return {
       drawer: true,
-      chilunSvg
+      chilunSvg,
+      showSrollTop: false
     };
   },
-  created() {
-    /*     return axios.get('/api/article/list')
-          .then((res) => {
-            this.list = res.data;
-          }); */
+  methods: {
+    onScroll(e) {
+      const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
+
+      if (top > SCROLL_TOP) {
+        this.showSrollTop = true;
+      } else {
+        this.showSrollTop = false;
+      }
+    },
+    scrollTop() {
+      window.scroll(0, 0);
+    }
+  },
+  mounted() {
+    doc = document.documentElement;
+    window.onscroll = _.throttle(this.onScroll.bind(this), 100);
   }
 }
 </script>

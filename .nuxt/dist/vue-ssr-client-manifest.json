@@ -8,7 +8,7 @@
     "f89ba2d89e5710c9ff4d03829963cf2d.svg",
     "fonts/materialdesignicons-webfont.3bd364e.eot",
     "pages\\articles\\_article.a04706e46d2d84c32fba.js",
-    "layouts\\default.a253746958247b6905c7.js",
+    "layouts\\default.0cd03b721c9dfe01364c.js",
     "pages\\index.05edc8f3793325b2f37a.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
     "app.2083a33f960995c8e86a.js",
@@ -16,10 +16,10 @@
     "6.c231a1f9d72b6d19487b.js",
     "7.69f05d329327ff7fdcf5.js",
     "a4025e1d81e20b72dbff75f4f6d2b500.svg",
-    "manifest.06c3d0094bbbe7a82049.js",
+    "manifest.02f1557b3250af9c061f.js",
     "LICENSES",
     "pages\\articles\\_article.a04706e46d2d84c32fba.js.map",
-    "layouts\\default.a253746958247b6905c7.js.map",
+    "layouts\\default.0cd03b721c9dfe01364c.js.map",
     "pages\\index.05edc8f3793325b2f37a.js.map",
     "pages\\about.1c0ff33f45b31dbb9ff3.js.map",
     "app.2083a33f960995c8e86a.js.map",
@@ -27,19 +27,19 @@
     "6.c231a1f9d72b6d19487b.js.map",
     "7.69f05d329327ff7fdcf5.js.map",
     "8.173ceb57c658d5126b86.js.map",
-    "manifest.06c3d0094bbbe7a82049.js.map",
+    "manifest.02f1557b3250af9c061f.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.06c3d0094bbbe7a82049.js",
+    "manifest.02f1557b3250af9c061f.js",
     "common.1a9f32ebeea998585ad0.js",
     "app.2083a33f960995c8e86a.js"
   ],
   "async": [
     "8.173ceb57c658d5126b86.js",
     "pages\\articles\\_article.a04706e46d2d84c32fba.js",
-    "layouts\\default.a253746958247b6905c7.js",
+    "layouts\\default.0cd03b721c9dfe01364c.js",
     "pages\\index.05edc8f3793325b2f37a.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
     "6.c231a1f9d72b6d19487b.js",
@@ -269,6 +269,11 @@
       4,
       5,
       5
+    ],
+    "2bc74ada": [
+      7,
+      18,
+      14
     ],
     "4cf70c02": [
       10,
@@ -683,6 +688,11 @@
       4,
       5,
       5
+    ],
+    "2b9480fb": [
+      7,
+      18,
+      14
     ],
     "b769ee7c": [
       10,
@@ -1688,6 +1698,10 @@
       9,
       20
     ],
+    "2ea586e5": [
+      11,
+      22
+    ],
     "385f2908": [
       6,
       17
@@ -1711,10 +1725,6 @@
       4,
       5,
       5
-    ],
-    "2ea586e5": [
-      11,
-      22
     ],
     "5cdf6d73": [
       10,
