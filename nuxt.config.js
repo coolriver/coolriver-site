@@ -22,10 +22,13 @@ module.exports = {
     title: 'coolriver的空间',
   },
   build: {
-    extend: function(config) {
-      const imageLoaderConf = config.module.rules.find(function(item) {
+    extend: function (config) {
+      const imageLoaderConf = config.module.rules.find(function (item) {
         return item.test.toString().indexOf('|svg') >= 0;
       });
+
+      const vueLoader = config.module.rules.find((rule) => rule.loader === 'vue-loader');
+      vueLoader.options.loaders.sass = 'vue-style-loader!css-loader!sass-loader';
 
       imageLoaderConf.test = /\.(png|jpe?g|gif)$/;
 
