@@ -1,7 +1,8 @@
 <template>
   <div>
     <!-- <h1>{{env}}</h1> -->
-    <v-icon>mdi-rowing</v-icon>
+    <!-- <v-icon>mdi-bookmark</v-icon> -->
+    <article-tags :tags="metaData.tags"></article-tags>
     <div class="markdown-body" v-html="content"></div>
     <!--PC和WAP自适应版-->
     <div id="SOHUCS" :sid="metaData.id"></div>
@@ -10,6 +11,7 @@
 
 <script>
 import axios from 'axios';
+import ArticleTags from '../../components/article-tags';
 import { initComment, cleanComment } from '../../libs/changyan';
 
 const sleep = function(time) {
@@ -60,6 +62,9 @@ export default {
   },
   mounted() {
     initComment();
+  },
+  components: {
+    'article-tags': ArticleTags,
   }
 };
 </script>

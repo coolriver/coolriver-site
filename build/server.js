@@ -477,6 +477,11 @@ module.exports = {
         return item.test.toString().indexOf('|svg') >= 0;
       });
 
+      var vueLoader = config.module.rules.find(function (rule) {
+        return rule.loader === 'vue-loader';
+      });
+      vueLoader.options.loaders.sass = 'vue-style-loader!css-loader!sass-loader';
+
       imageLoaderConf.test = /\.(png|jpe?g|gif)$/;
 
       config.module.rules = config.module.rules.concat([{
