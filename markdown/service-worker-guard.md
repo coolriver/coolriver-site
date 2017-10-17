@@ -1,4 +1,4 @@
-<!--TAG javascript,service worker /TAG-->
+<!--TAG javascript;service worker /TAG-->
 <!--DESC service worker 简介 /DESC-->
 # 页面守护者：Service Worker
 

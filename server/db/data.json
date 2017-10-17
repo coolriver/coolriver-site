@@ -40,7 +40,8 @@
       "img": "http://7tszky.com1.z0.glb.clouddn.com/FojkDD5GjXj0DFQVx_YWvHXrcTcs",
       "desc": "service worker 简介 ",
       "tags": [
-        "javascript,service worker "
+        "javascript",
+        "service worker "
       ],
       "name": "service-worker-guard",
       "id": "S1Q8YDm6b",
