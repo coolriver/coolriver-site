@@ -34,6 +34,17 @@
       "name": "settimeout-story",
       "id": "rkIc1i-ab",
       "time": 1507887704128
+    },
+    {
+      "title": "页面守护者：Service Worker",
+      "img": "http://7tszky.com1.z0.glb.clouddn.com/FojkDD5GjXj0DFQVx_YWvHXrcTcs",
+      "desc": "service worker 简介 ",
+      "tags": [
+        "javascript,service worker "
+      ],
+      "name": "service-worker-guard",
+      "id": "S1Q8YDm6b",
+      "time": 1508239590951
     }
   ],
   "user": {},
