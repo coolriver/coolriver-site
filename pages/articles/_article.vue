@@ -4,15 +4,14 @@
     <!-- <v-icon>mdi-bookmark</v-icon> -->
     <article-tags :tags="metaData.tags"></article-tags>
     <div class="markdown-body" v-html="content"></div>
-    <!--PC和WAP自适应版-->
-    <div id="SOHUCS" :sid="metaData.id"></div>
+    <changyan-comments :sid="metaData.id"></changyan-comments>
   </div>
 </template>
 
 <script>
 import axios from 'axios';
 import ArticleTags from '../../components/article-tags';
-import { initComment, cleanComment } from '../../libs/changyan';
+import ChangyanComments from '../../components/changyan-comments';
 
 const sleep = function(time) {
   return new Promise(resolve => {
@@ -57,28 +56,21 @@ export default {
       ]
     };
   },
-  destroyed() {
-    cleanComment();
-  },
-  mounted() {
-    initComment();
-  },
   components: {
     'article-tags': ArticleTags,
+    'changyan-comments': ChangyanComments
   }
 };
 </script>
 
-<style scoped>
+<style lang="scss">
 .markdown-body {
   background: #fff;
   padding: 20px;
-}
 
-#SOHUCS {
-  background: #fff;
-  padding: 20px;
-  margin: 20px 0;
+  img {
+    position: relative;
+  }
 }
 </style>
 
