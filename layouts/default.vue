@@ -51,6 +51,7 @@
 <script>
 import axios from 'axios';
 import _ from 'lodash';
+import zhanZhang from '../libs/zhanzhang';
 const chilunSvg = require('../assets/image/chilun.svg');
 
 const SCROLL_TOP = 100;
@@ -82,6 +83,7 @@ export default {
   mounted() {
     doc = document.documentElement;
     window.onscroll = _.throttle(this.onScroll.bind(this), 100);
+    zhanZhang();
   }
 }
 </script>
