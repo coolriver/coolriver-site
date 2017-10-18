@@ -12,6 +12,7 @@
 import axios from 'axios';
 import ArticleTags from '../../components/article-tags';
 import ChangyanComments from '../../components/changyan-comments';
+import imgPreviewMixin from '../../libs/mixins/imgPreview';
 
 const sleep = function(time) {
   return new Promise(resolve => {
@@ -20,6 +21,7 @@ const sleep = function(time) {
 }
 
 export default {
+  mixins: [imgPreviewMixin],
   async asyncData({ params, error, req }) {
     const { article } = params;
     const articleDataUrl = req ? `http://coolriver.net.cn/api/articles/${article}` : `/api/articles/${article}`;
@@ -70,6 +72,7 @@ export default {
 
   img {
     position: relative;
+    cursor: zoom-in;
   }
 }
 </style>
