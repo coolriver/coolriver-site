@@ -17,17 +17,17 @@
             <v-layout row wrap>
               <v-flex xs12>
                 <v-card hover>
-                  <v-card-title primary class="title">Lorem</v-card-title>
+                  <v-card-title primary class="title">最近文章</v-card-title>
                   <v-card-text>
-                    lalalala
+                    别急，正在开发中。。
                   </v-card-text>
                 </v-card>
               </v-flex>
               <v-flex xs12>
                 <v-card hover>
-                  <v-card-title primary class="title">Lorem</v-card-title>
+                  <v-card-title primary class="title">文章标签</v-card-title>
                   <v-card-text>
-                    lalalala
+                    别急，正在开发中。。
                   </v-card-text>
                 </v-card>
               </v-flex>
