@@ -9,7 +9,7 @@ import NuxtError from './components/nuxt-error.vue'
 import Nuxt from './components/nuxt.vue'
 import App from './App.vue'
 import { getContext, getLocation } from './utils'
-
+import { createStore } from './store.js'
 import plugin0 from 'plugin0'
 import plugin1 from 'plugin1'
 
@@ -39,14 +39,14 @@ const defaultTransition = {"name":"page","mode":"out-in","appear":false,"appearC
 async function createApp (ssrContext) {
   const router = createRouter()
 
-  
+  const store = createStore()
 
   // Create Root instance
   // here we inject the router and store to all child components,
   // making them available everywhere as `this.$router` and `this.$store`.
   const app = {
     router,
-    
+    store,
     _nuxt: {
       defaultTransition,
       transitions: [ defaultTransition ],
@@ -83,6 +83,9 @@ async function createApp (ssrContext) {
     ...App
   }
   
+  // Make app available in store
+  store.app = app
+  
   const next = ssrContext ? ssrContext.next : location => app.router.push(location)
   let route
   if (ssrContext) {
@@ -97,7 +100,7 @@ async function createApp (ssrContext) {
     route,
     next,
     error: app._nuxt.error.bind(app),
-    
+    store,
     req: ssrContext ? ssrContext.req : undefined,
     res: ssrContext ? ssrContext.res : undefined,
     beforeRenderFns: ssrContext ? ssrContext.beforeRenderFns : undefined
@@ -123,8 +126,18 @@ async function createApp (ssrContext) {
       }
     })
     
+    // Add into store
+    store[key] = app[key]
+    
   }
 
+  
+  if (process.browser) {
+    // Replace store state before plugins execution
+    if (window.__NUXT__ && window.__NUXT__.state) {
+      store.replaceState(window.__NUXT__.state)
+    }
+  }
   
 
   
@@ -143,7 +156,7 @@ async function createApp (ssrContext) {
   return {
     app,
     router,
-    
+     store 
   }
 }
 

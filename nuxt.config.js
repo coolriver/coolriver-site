@@ -18,10 +18,6 @@ module.exports = {
       {
         src: 'https://hm.baidu.com/hm.js?406ea27bfbb3000b689c8ab5f17ebb86',
         async: 'async'
-      },
-      {
-        src: '//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js',
-        async: 'async'
       }
     ],
     title: 'coolriver的空间',

@@ -37,17 +37,14 @@
       </v-container>
     </main>
     <div class="view-count">
-      <span id="busuanzi_container_site_pv">
-        site pv:
-        <span id="busuanzi_value_site_pv"></span>
+      <span>
+        site pv: {{pvUv.sitePv}}
       </span>
-      <span id="busuanzi_container_site_uv">
-        site uv:
-        <span id="busuanzi_value_site_uv"></span>
+      <span>
+        site uv: {{pvUv.siteUv}}
       </span>
-      <span id="busuanzi_container_page_pv">
-        page pv:
-        <span id="busuanzi_value_page_pv"></span>
+      <span>
+        page pv: {{pvUv.pagePv}}
       </span>
     </div>
     <v-footer class="grey darken-3 justify-center">
@@ -64,6 +61,7 @@
 
 <script>
 import axios from 'axios';
+import { mapState } from 'vuex';
 import _ from 'lodash';
 import zhanZhang from '../libs/zhanzhang';
 const chilunSvg = require('../assets/image/chilun.svg');
@@ -79,6 +77,9 @@ export default {
       chilunSvg,
       showSrollTop: false
     };
+  },
+  computed: {
+    ...(mapState(['pvUv']))
   },
   methods: {
     onScroll(e) {
@@ -110,7 +111,6 @@ export default {
 
   & > span {
     margin-left: 10px;
-    display: none;
   }
 }
 

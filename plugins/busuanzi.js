@@ -1,20 +1,45 @@
 /**
  * http://busuanzi.ibruce.info/
  */
+let scriptTag = null;
 
-export default ({ app }) => {
+const bszCaller = {
+  fetch: function (a, b) {
+    var c = "BusuanziCallback_" + Math.floor(1099511627776 * Math.random());
+    window[c] = function (result) {
+      b(result);
+      scriptTag.parentElement.removeChild(scriptTag);
+    };
+    a = a.replace("=BusuanziCallback", "=" + c);
+    scriptTag = document.createElement("SCRIPT");
+    scriptTag.type = "text/javascript";
+    scriptTag.defer = !0;
+    scriptTag.src = a;
+    document.getElementsByTagName("HEAD")[0].appendChild(scriptTag);
+  }
+};
+
+export default ({ app, store }) => {
   app.router.afterEach((to, from) => {
-    if (from.matched.length) { // 非初次加载页面时才执行
-      document.getElementById('busuanzi_container_site_pv').style.display = 'none';
-      document.getElementById('busuanzi_container_site_uv').style.display = 'none';
-      document.getElementById('busuanzi_container_page_pv').style.display = 'none';
-
-      setTimeout(() => { // 延迟更新访问信息，使路由路径先更新
-        bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function (a) {
-          bszTag.texts(a);
-          bszTag.shows()
+    setTimeout(() => { // 延迟更新访问信息，使路由路径先更新
+      bszCaller.fetch('//busuanzi.ibruce.info/busuanzi?jsonpCallback=BusuanziCallback', function (a) {
+        const { site_uv, site_pv, page_pv } = a;
+        store.commit('updatePvUv', {
+          siteUv: site_uv,
+          sitePv: site_pv,
+          pagePv: page_pv,
         });
-      }, 0);
-    }
+      });
+    }, 0);
+  });
+
+  app.router.beforeEach((to, from, next) => {
+    store.commit('updatePvUv', {
+      siteUv: 0,
+      sitePv: 0,
+      pagePv: 0,
+    });
+
+    next();
   });
 };

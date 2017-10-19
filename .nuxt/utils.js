@@ -77,7 +77,7 @@ export function getContext (context, app) {
     isDev: false,
     isHMR: context.isHMR || false,
     app: app,
-    
+    store: context.store,
     route: (context.to ? context.to : context.route),
     payload: context.payload,
     error: context.error,
