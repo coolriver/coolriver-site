@@ -36,6 +36,20 @@
         </v-layout>
       </v-container>
     </main>
+    <div class="view-count">
+      <span id="busuanzi_container_site_pv">
+        site pv:
+        <span id="busuanzi_value_site_pv"></span>
+      </span>
+      <span id="busuanzi_container_site_uv">
+        site uv:
+        <span id="busuanzi_value_site_uv"></span>
+      </span>
+      <span id="busuanzi_container_page_pv">
+        page pv:
+        <span id="busuanzi_value_page_pv"></span>
+      </span>
+    </div>
     <v-footer class="grey darken-3 justify-center">
       <span class="white--text">Copyright © 2017 coolriver</span>
       <span class="white--text ml-3 hidden-xs-only">粤ICP备16047967号-1</span>
@@ -88,7 +102,18 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.view-count {
+  color: #666;
+  text-align: center;
+  margin: 15px auto 15px -10px;
+
+  & > span {
+    margin-left: 10px;
+    display: none;
+  }
+}
+
 .svg-bg {
   position: fixed;
   z-index: 0;
