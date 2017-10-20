@@ -20,9 +20,10 @@ export function parseTags (content) {
  * @returns {String} 文章简介
  */
 export function parseDesc (content) {
-  const DESC_REG = /^<!--DESC\s*(.*)\s*\/DESC-->$/m;
+  //const DESC_REG = /^<!--DESC\s*(.*)\s*\/DESC-->$/m;
+  const DESC_REG = /^(?=[\u4e00-\u9fa5]|[\w])(.*)$/m;
   const matches = content.match(DESC_REG) || [];
-
+  console.log('desc: ' + matches[1]);
   return matches[1] || '暂无简介信息';
 };
 
@@ -52,6 +53,6 @@ export function parseTitle (content) {
   const matches = content.match(TITLE_REG) || [];
   const title = matches[1] && matches[1].trim() || '未知标题';
 
-  console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@' + title);
+  console.log('title: ' + title);
   return title;
 }

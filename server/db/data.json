@@ -3,7 +3,7 @@
     {
       "title": "chrome插件 DIY",
       "img": "http://oxjqfafek.bkt.clouddn.com/blog/171020/cDaA47JmJd.png?imageslim",
-      "desc": "本文主要介绍了chrome插件开发的一些常用知识 ",
+      "desc": "对于一个web前端开发者，chrome浏览器是一个工作，学习和生活的必备工具。除了chrome本身的基本能力（控制台等）外，能大幅提高这个神器的使用体验的是，可扩展能力（插件）以及丰富的插件生态。",
       "tags": [
         "chrome",
         "plugin "
@@ -15,7 +15,7 @@
     {
       "title": "在新窗口中打开页面？小心有坑！!",
       "img": "http://7tszky.com1.z0.glb.clouddn.com/FqeVN2UDSOFoWnoQKGKaNbmnS6JG",
-      "desc": "本文主要介绍在新打开页面过程中，可能遇到的安全和性能问题 ",
+      "desc": "产品需求来啦：点击页面上某个东西，要在新窗口中打开一个页面，注意！要在新窗口中打开。你呵呵一笑，太简单了：",
       "tags": [
         "安全",
         "性能 "
@@ -27,7 +27,7 @@
     {
       "title": "setTimeout的那些事儿",
       "img": "/image/default-article-img.jpg",
-      "desc": "关于setTimeout的一些理解，老鸟可绕道 ",
+      "desc": "之前[关于service worker介绍的文章](http://imweb.io/topic/56592b8a823633e31839fc01)中，这样描述了浏览器环境下Javascript环境：\"*每个页面的javascript运行主线程都是一个Boss*\"、\"*Boss很厉害，在页面上指点江山，呼风唤雨。但他有个局限：同一时刻只做一件事（单线程）*\"。",
       "tags": [
         "javascript "
       ],
@@ -38,7 +38,7 @@
     {
       "title": "页面守护者：Service Worker",
       "img": "http://7tszky.com1.z0.glb.clouddn.com/FojkDD5GjXj0DFQVx_YWvHXrcTcs",
-      "desc": "service worker 简介 ",
+      "desc": "Service的意思是服务，Worker的意思是工人，那么Service Worker的意思就是服务员。这个员工是2014年6月HTML5新招的实习生，目前在试用中。在此之前，已经有一位老员工，它叫Web Worker。那么问题来了，Boss是谁？Boss就是浏览器。准确来说，每个页面的javascript运行主线程都是一个Boss。",
       "tags": [
         "javascript",
         "service worker "

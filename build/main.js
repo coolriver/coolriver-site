@@ -601,9 +601,10 @@ function parseTags(content) {
  * @returns {String} 文章简介
  */
 function parseDesc(content) {
-  var DESC_REG = /^<!--DESC\s*(.*)\s*\/DESC-->$/m;
+  //const DESC_REG = /^<!--DESC\s*(.*)\s*\/DESC-->$/m;
+  var DESC_REG = /^(?=[\u4e00-\u9fa5]|[\w])(.*)$/m;
   var matches = content.match(DESC_REG) || [];
-
+  console.log('desc: ' + matches[1]);
   return matches[1] || '暂无简介信息';
 };
 
@@ -633,7 +634,7 @@ function parseTitle(content) {
   var matches = content.match(TITLE_REG) || [];
   var title = matches[1] && matches[1].trim() || '未知标题';
 
-  console.log('@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@' + title);
+  console.log('title: ' + title);
   return title;
 }
 
