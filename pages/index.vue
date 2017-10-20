@@ -75,12 +75,28 @@ export default {
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
     overflow: hidden;
-    height: 3rem;
+    height: 42px;
     margin-bottom: 0;
+    transition: all 300ms;
+  }
+
+  .card__media {
+    transition: all 300ms;
   }
 
   &-tags {
     margin: 5px auto -5px -5px;
+  }
+
+  &:hover {
+    .article-card-desc {
+      height: 84px;
+      -webkit-line-clamp: 4;
+    }
+
+    .card__media {
+      height: 148px !important;
+    }
   }
 }
 

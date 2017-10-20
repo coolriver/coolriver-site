@@ -604,7 +604,7 @@ function parseDesc(content) {
   //const DESC_REG = /^<!--DESC\s*(.*)\s*\/DESC-->$/m;
   var DESC_REG = /^(?=[\u4e00-\u9fa5]|[\w])(.*)$/m;
   var matches = content.match(DESC_REG) || [];
-  console.log('desc: ' + matches[1]);
+
   return matches[1] || '暂无简介信息';
 };
 
