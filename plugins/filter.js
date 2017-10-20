@@ -1,3 +1,5 @@
+import Vue from 'vue';
+
 const dateFormat = (date, format = 'yyyy-MM-dd hh:mm') => {
   if (!date) {
     return '';
@@ -32,4 +34,4 @@ const dateFormat = (date, format = 'yyyy-MM-dd hh:mm') => {
   return format;
 };
 
-export default dateFormat;
+Vue.filter('dateFormat', dateFormat);

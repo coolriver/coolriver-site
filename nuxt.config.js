@@ -60,7 +60,8 @@ module.exports = {
     {
       src: '~plugins/busuanzi',
       ssr: false
-    }
+    },
+    '~plugins/filter',
   ],
   vendor: ['axios']
 };

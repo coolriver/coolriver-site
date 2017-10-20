@@ -6,7 +6,7 @@
     <div class="article-info">
       <div class="article-info-time">
         <v-icon>mdi-av-timer</v-icon>
-        <span>{{dateFormated}}</span>
+        <span>{{metaData.time | dateFormat}}</span>
       </div>
       <div class="article-info-pv" v-if="pvUv.pagePv">
         <v-icon>mdi-eye</v-icon>
@@ -24,7 +24,6 @@ import { mapState } from 'vuex';
 import ArticleTags from '../../components/article-tags';
 import ChangyanComments from '../../components/changyan-comments';
 import imgPreviewMixin from '../../libs/mixins/imgPreview';
-import dateFormat from '../../libs/dateFormat';
 
 let interval = null;
 
@@ -62,9 +61,6 @@ export default {
   },
   computed: {
     ...(mapState(['pvUv'])),
-    dateFormated() {
-      return dateFormat(this.metaData.time)
-    }
   },
   head() {
     const { title, tags, img, desc } = this.metaData;

@@ -501,7 +501,7 @@ module.exports = {
   plugins: ['~plugins/vue-vuetify', {
     src: '~plugins/busuanzi',
     ssr: false
-  }],
+  }, '~plugins/filter'],
   vendor: ['axios']
 };
 
