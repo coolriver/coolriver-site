@@ -1,12 +1,14 @@
 <template>
   <v-layout wrap>
-    <v-flex class="article-card" d-flex v-for="(item, index) in list" :key="index" xs12 md6 lg4>
+    <v-flex :class="`article-card ${item.flexClass}`" d-flex v-for="(item, index) in listFormated" :key="index" :xs="12" md6 lg4>
       <nuxt-link :to="`/articles/${item.name}`" v-if="true">
         <v-card hover>
           <v-card-media height="190px" :src="item.img">
           </v-card-media>
           <v-card-text>
-            {{item.title}}
+            <h2>{{item.title}}</h2>
+            <p class="article-card-desc">{{item.desc}}</p>
+            <article-tags class="article-card-tags" :tags="item.tags"></article-tags>
           </v-card-text>
         </v-card>
       </nuxt-link>
@@ -16,29 +18,70 @@
 
 <script>
 import axios from 'axios';
+import ArticleTags from '../components/article-tags';
+import { cardFlexLayout } from '../config/constant';
 
 export default {
   async asyncData({ params, err, req }) {
-    const url = req ? 'http://coolriver.net.cn/api/articles' : '/api/articles';
+    const url = req ? 'http://localhost/api/articles' : '/api/articles';
     const result = await axios.get(url);
     return {
-      list: result.data
+      list: result.data.concat(result.data).concat(result.data)
     };
   },
   data() {
     return {
-      list: []
+      list: [],
     };
+  },
+  computed: {
+    listFormated() {
+      return this.list.map((item, index) => {
+        const flexClass = Object.keys(cardFlexLayout).map(key => {
+          const flexList = cardFlexLayout[key];
+          return `${key}${flexList[index % flexList.length]}`;
+        }).join(' ');
+
+        return Object.assign({}, item, {
+          flexClass,
+        });
+      });
+    }
   },
   created() {
 
+  },
+  components: {
+    ArticleTags,
   }
 };
 </script>
 
-<style scoped>
-.article-card>a {
-  width: 100%;
+<style scoped lang="scss">
+.article-card {
+  &>a {
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+
+  &-desc {
+    white-space: normal;
+    color: rgba(0, 0, 0, .6);
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    height: 3rem;
+    margin-bottom: 0;
+  }
+
+  &-tags {
+    margin: 5px auto -5px -5px;
+  }
 }
 
 .card__text {

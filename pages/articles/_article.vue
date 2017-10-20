@@ -2,7 +2,7 @@
   <div>
     <!-- <h1>{{env}}</h1> -->
     <!-- <v-icon>mdi-bookmark</v-icon> -->
-    <article-tags :tags="metaData.tags"></article-tags>
+    <article-tags class="article-tags" :tags="metaData.tags"></article-tags>
     <div class="article-info">
       <div class="article-info-time">
         <v-icon>mdi-av-timer</v-icon>
@@ -85,7 +85,11 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+.article-tags {
+  padding: 20px 20px 0 20px;
+}
+
 .article-info {
   padding: 5px 20px;
   background: #fff;

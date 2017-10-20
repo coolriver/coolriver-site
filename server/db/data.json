@@ -2,7 +2,7 @@
   "articles": [
     {
       "title": "chrome插件 DIY",
-      "img": "http://7tszky.com1.z0.glb.clouddn.com/Foqn7uVaErx62-HlCZVSuqHRl9op",
+      "img": "http://oxjqfafek.bkt.clouddn.com/blog/171020/cDaA47JmJd.png?imageslim",
       "desc": "本文主要介绍了chrome插件开发的一些常用知识 ",
       "tags": [
         "chrome",
@@ -26,7 +26,7 @@
     },
     {
       "title": "setTimeout的那些事儿",
-      "img": "default_img",
+      "img": "/image/default-article-img.jpg",
       "desc": "关于setTimeout的一些理解，老鸟可绕道 ",
       "tags": [
         "javascript "

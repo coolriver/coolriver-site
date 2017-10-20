@@ -1,6 +1,7 @@
 <!--TAG chrome;plugin /TAG-->
 <!--DESC 本文主要介绍了chrome插件开发的一些常用知识 /DESC-->
 # chrome插件 DIY
+![](http://oxjqfafek.bkt.clouddn.com/blog/171020/cDaA47JmJd.png?imageslim)
 ## 1 前言
 对于一个web前端开发者，chrome浏览器是一个工作，学习和生活的必备工具。除了chrome本身的基本能力（控制台等）外，能大幅提高这个神器的使用体验的是，可扩展能力（插件）以及丰富的插件生态。
 

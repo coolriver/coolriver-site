@@ -37,13 +37,13 @@
       </v-container>
     </main>
     <div class="view-count">
-      <span>
+      <span v-if="pvUv.sitePv">
         site pv: {{pvUv.sitePv}}
       </span>
-      <span>
+      <span v-if="pvUv.siteUv">
         site uv: {{pvUv.siteUv}}
       </span>
-      <span>
+      <span v-if="pvUv.pagePv">
         page pv: {{pvUv.pagePv}}
       </span>
     </div>
@@ -176,6 +176,12 @@ export default {
 
   .container {
     margin-top: 8px;
+  }
+}
+
+@media only screen and (min-width: 1904px) {
+  .container.grid-list-md {
+    max-width: 1185px;
   }
 }
 </style>

@@ -322,7 +322,7 @@ function parseImage(content) {
   var IMG_REG = /!\[\]\(([^\(\)]+)\)/;
   var matches = content.match(IMG_REG) || [];
 
-  return matches[1] || 'default_img';
+  return matches[1] || '/image/default-article-img.jpg';
 };
 
 /**
