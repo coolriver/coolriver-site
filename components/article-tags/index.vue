@@ -19,7 +19,6 @@ $tagSpace : 10px;
 
 .article-tag-list {
   background: #fff;
-  // padding: 20px 20px 0 20px;
 
   span {
     margin-left: $tagSpace;

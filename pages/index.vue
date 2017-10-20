@@ -26,7 +26,7 @@ export default {
     const url = req ? 'http://localhost/api/articles' : '/api/articles';
     const result = await axios.get(url);
     return {
-      list: result.data.concat(result.data).concat(result.data)
+      list: result.data
     };
   },
   data() {
