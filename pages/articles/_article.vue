@@ -19,7 +19,8 @@
 </template>
 
 <script>
-import axios from 'axios';
+// import axios from 'axios';
+import api from '../../libs/api';
 import { mapState } from 'vuex';
 import ArticleTags from '../../components/article-tags';
 import ChangyanComments from '../../components/changyan-comments';
@@ -36,21 +37,21 @@ const sleep = function(time) {
 export default {
   mixins: [imgPreviewMixin],
   async asyncData({ params, error, req }) {
-    const { article } = params;
-    const articleDataUrl = req ? `http://coolriver.net.cn/api/articles/${article}` : `/api/articles/${article}`;
-    const [content, articleData] = await Promise.all([
-      import(`../../markdown/${params.article}.md`),
-      await axios.get(articleDataUrl)
-    ]);
-
     try {
+      const { article } = params;
+      // const articleDataUrl = req ? `http://coolriver.net.cn/api/articles/${article}` : `/api/articles/${article}`;
+      const [content, articleData] = await Promise.all([
+        import(`../../markdown/${params.article}.md`),
+        api.article.getArticle({ name: article })
+      ]);
+
       return {
         content,
-        metaData: articleData.data || {},
+        metaData: articleData || {},
         env: req ? 'server' : 'client',
       };
     } catch (e) {
-      error({ statusCode: 404, message: 'Unkown Article' });
+      error({ statusCode: 404, message: 'article do not exist' });
     }
   },
   data() {
@@ -106,7 +107,7 @@ export default {
     right: 20px;
     top: 5px;
 
-    & > span {
+    &>span {
       vertical-align: middle;
       margin-left: 5px;
     }

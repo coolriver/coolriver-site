@@ -8,7 +8,7 @@ export async function getList(ctx, next) {
 }
 
 export async function find (ctx, next) {
-  const article = articleModel.find({ name: ctx.params.name });
+  const article = articleModel.find({ name: ctx.query.name });
   ctx.status = 200;
   ctx.body = article;
 }

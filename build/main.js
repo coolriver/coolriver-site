@@ -331,7 +331,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_0_koa_router___default.a();
 
 function setupRouter(app) {
   router.get('/api/articles', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["b" /* getList */]);
-  router.get('/api/articles/:name', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["a" /* find */]);
+  router.get('/api/article', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["a" /* find */]);
 
   app.use(router.routes());
 };
@@ -391,7 +391,7 @@ var find = function () {
             while (1) {
                 switch (_context2.prev = _context2.next) {
                     case 0:
-                        article = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].find({ name: ctx.params.name });
+                        article = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].find({ name: ctx.query.name });
 
                         ctx.status = 200;
                         ctx.body = article;

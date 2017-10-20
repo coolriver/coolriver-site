@@ -1,5 +1,5 @@
 <template>
-  <v-app id="example-2" light>
+  <v-app id="example-2" light v-scroll="onScrollThottle()">
     <v-toolbar class="cyan darken" dark fixed>
       <nuxt-link to="/">
         <v-toolbar-title class="home-title">coolriver</v-toolbar-title>
@@ -93,11 +93,13 @@ export default {
     },
     scrollTop() {
       window.scroll(0, 0);
+    },
+    onScrollThottle() {
+      return _.throttle(this.onScroll.bind(this), 100);
     }
   },
   mounted() {
     doc = document.documentElement;
-    window.onscroll = _.throttle(this.onScroll.bind(this), 100);
     zhanZhang();
   }
 }

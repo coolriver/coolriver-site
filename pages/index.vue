@@ -17,16 +17,16 @@
 </template>
 
 <script>
-import axios from 'axios';
+import api from '../libs/api';
 import ArticleTags from '../components/article-tags';
 import { cardFlexLayout } from '../config/constant';
 
 export default {
   async asyncData({ params, err, req }) {
-    const url = req ? 'http://coolriver.net.cn/api/articles' : '/api/articles';
-    const result = await axios.get(url);
+    const result = await api.article.getAllList();
+
     return {
-      list: result.data
+      list: result
     };
   },
   data() {

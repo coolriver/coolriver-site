@@ -1694,6 +1694,10 @@ deepmerge@^1.5.0:
   version "1.5.2"
   resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-1.5.2.tgz#10499d868844cdad4fee0842df8c7f6f0c95a753"
 
+deepmerge@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/deepmerge/-/deepmerge-2.0.0.tgz#35f7ee08e8bde1173b3a529f732dcda67ce82e29"
+
 define-properties@^1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/define-properties/-/define-properties-1.1.2.tgz#83a73f2fea569898fb737193c8f873caf6d45c94"
