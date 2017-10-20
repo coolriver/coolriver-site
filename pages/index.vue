@@ -23,7 +23,7 @@ import { cardFlexLayout } from '../config/constant';
 
 export default {
   async asyncData({ params, err, req }) {
-    const url = req ? 'http://localhost/api/articles' : '/api/articles';
+    const url = req ? 'http://coolriver.net.cn/api/articles' : '/api/articles';
     const result = await axios.get(url);
     return {
       list: result.data
