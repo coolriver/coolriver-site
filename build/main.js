@@ -438,7 +438,7 @@ function setupCors(app) {
   app.use(__WEBPACK_IMPORTED_MODULE_0_koa2_cors___default()({
     origin: function origin(ctx) {
       // return '*';
-      console.log(ctx.hostname);
+      // console.log(ctx.hostname);
       if (whiteDomain.indexOf(ctx.hostname) >= 0) {
         return ctx.origin;
       }
