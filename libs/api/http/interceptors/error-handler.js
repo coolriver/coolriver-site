@@ -14,7 +14,7 @@ export default (instance) => {
 
     content = content || '请求出错, 请稍后重试';
 
-    alert(content);
+    console.error(content);
 
     return Promise.reject(error);
   });
