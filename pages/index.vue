@@ -23,7 +23,7 @@ import { cardFlexLayout } from '../config/constant';
 
 export default {
   async asyncData({ params, err, req }) {
-    const result = await api.article.getAllList();
+    const result = await api.article.getList();
 
     return {
       list: result

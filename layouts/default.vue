@@ -15,14 +15,7 @@
           </v-flex>
           <v-flex xs12 md3 order-xs3 order-md4 class="aside">
             <v-layout row wrap>
-              <v-flex xs12>
-                <v-card hover>
-                  <v-card-title primary class="title">最近文章</v-card-title>
-                  <v-card-text>
-                    别急，正在开发中。。
-                  </v-card-text>
-                </v-card>
-              </v-flex>
+              <article-recent></article-recent>
               <v-flex xs12>
                 <v-card hover>
                   <v-card-title primary class="title">文章标签</v-card-title>
@@ -60,10 +53,13 @@
 </template>
 
 <script>
-import axios from 'axios';
+import api from '../libs/api';
 import { mapState } from 'vuex';
 import _ from 'lodash';
 import zhanZhang from '../libs/zhanzhang';
+import { RECENT_ARTICLE_COUNT } from '../config/constant';
+import ArticleRecent from '../components/article-recent';
+
 const chilunSvg = require('../assets/image/chilun.svg');
 
 const SCROLL_TOP = 100;
@@ -78,8 +74,14 @@ export default {
       showSrollTop: false
     };
   },
+  created() {
+    /*     api.article.getList({ limit: RECENT_ARTICLE_COUNT })
+      .then(list => {
+        this.$store.commit('updateRecentList', list);
+      }); */
+  },
   computed: {
-    ...(mapState(['pvUv']))
+    ...mapState(['pvUv', 'recentList'])
   },
   methods: {
     onScroll(e) {
@@ -96,13 +98,22 @@ export default {
     },
     onScrollThottle() {
       return _.throttle(this.onScroll.bind(this), 100);
+    },
+    fetchRecentArticle() {
+      api.article.getList({ limit: RECENT_ARTICLE_COUNT }).then(list => {
+        this.$store.commit('updateRecentList', list);
+      });
     }
   },
   mounted() {
+    this.fetchRecentArticle();
     doc = document.documentElement;
     zhanZhang();
+  },
+  components: {
+    ArticleRecent
   }
-}
+};
 </script>
 
 <style scoped lang="scss">
@@ -125,7 +136,7 @@ export default {
   color: #fff;
 }
 
-.aside>.layout {
+.aside > .layout {
   position: sticky;
   top: 76px;
 }
@@ -144,7 +155,7 @@ export default {
   position: relative;
 }
 
-.container>.layout {
+.container > .layout {
   min-height: 100vh;
 }
 
@@ -154,7 +165,7 @@ export default {
 }
 
 @media (min-width: 0) {
-  .container>.layout {
+  .container > .layout {
     min-height: 0;
   }
 
@@ -168,7 +179,7 @@ export default {
 }
 
 @media (min-width: 960px) {
-  .container>.layout {
+  .container > .layout {
     min-height: 100vh;
   }
 

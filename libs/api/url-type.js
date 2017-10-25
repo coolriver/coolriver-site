@@ -11,7 +11,7 @@
  */
 export default {
   article: {
-    getAllList: '/api/articles',
+    getList: '/api/articles',
     getArticle: '/api/article'
   }
 };

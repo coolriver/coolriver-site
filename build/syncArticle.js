@@ -162,7 +162,7 @@ function insertOrUpdate(_ref) {
     tags: tags,
     name: name
   };
-  var articleFind = articleModel.find({ name: name });
+  var articleFind = find({ name: name });
 
   if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
@@ -179,14 +179,14 @@ function insertOrUpdate(_ref) {
 function getList() {
   var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  return articleModel.filter(filter).value();
+  return articleModel.filter(filter);
 };
 
 // 根据条件返回一个文章信息
 function find() {
   var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  return articleModel.find(filter).value();
+  return articleModel.find(filter);
 }
 
 /***/ }),

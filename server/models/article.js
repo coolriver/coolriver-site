@@ -12,7 +12,7 @@ export function insertOrUpdate({ title, time, img, desc, tags, name }) {
     tags,
     name
   };
-  const articleFind = articleModel.find({ name });
+  const articleFind = find({ name });
 
   if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
@@ -27,10 +27,10 @@ export function insertOrUpdate({ title, time, img, desc, tags, name }) {
 
 // 根据条件返回文章列表
 export function getList (filter = {}) {
-  return articleModel.filter(filter).value();
+  return articleModel.filter(filter);
 };
 
 // 根据条件返回一个文章信息
 export function find (filter = {}) {
-  return articleModel.find(filter).value();
+  return articleModel.find(filter);
 }

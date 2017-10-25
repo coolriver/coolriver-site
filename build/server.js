@@ -162,7 +162,7 @@ function insertOrUpdate(_ref) {
     tags: tags,
     name: name
   };
-  var articleFind = articleModel.find({ name: name });
+  var articleFind = find({ name: name });
 
   if (!articleFind.value()) {
     // 新增article时，需要传入id和创建时间
@@ -179,14 +179,14 @@ function insertOrUpdate(_ref) {
 function getList() {
   var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  return articleModel.filter(filter).value();
+  return articleModel.filter(filter);
 };
 
 // 根据条件返回一个文章信息
 function find() {
   var filter = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : {};
 
-  return articleModel.find(filter).value();
+  return articleModel.find(filter);
 }
 
 /***/ }),
@@ -359,54 +359,62 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 var getList = function () {
-    var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
-        var list;
-        return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
-            while (1) {
-                switch (_context.prev = _context.next) {
-                    case 0:
-                        list = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].getList();
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+    var _ctx$query, _ctx$query$limit, limit, _ctx$query$offset, offset, list;
 
-                        ctx.status = 200;
-                        ctx.body = list;
-                        // next();
+    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+      while (1) {
+        switch (_context.prev = _context.next) {
+          case 0:
+            _ctx$query = ctx.query, _ctx$query$limit = _ctx$query.limit, limit = _ctx$query$limit === undefined ? Number.MAX_SAFE_INTEGER : _ctx$query$limit, _ctx$query$offset = _ctx$query.offset, offset = _ctx$query$offset === undefined ? 0 : _ctx$query$offset;
 
-                    case 3:
-                    case 'end':
-                        return _context.stop();
-                }
-            }
-        }, _callee, this);
-    }));
+            limit = parseInt(limit, 10);
+            offset = parseInt(offset, 10);
 
-    return function getList(_x, _x2) {
-        return _ref.apply(this, arguments);
-    };
+            list = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].getList().sort(function (a, b) {
+              // 按照最新的放在最前面排序
+              return a.time > b.time ? -1 : 1;
+            }).slice(offset, limit + offset).value();
+
+            ctx.status = 200;
+            ctx.body = list;
+
+          case 6:
+          case 'end':
+            return _context.stop();
+        }
+      }
+    }, _callee, this);
+  }));
+
+  return function getList(_x, _x2) {
+    return _ref.apply(this, arguments);
+  };
 }();
 
 var find = function () {
-    var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
-        var article;
-        return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
-            while (1) {
-                switch (_context2.prev = _context2.next) {
-                    case 0:
-                        article = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].find({ name: ctx.query.name });
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+    var article;
+    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+      while (1) {
+        switch (_context2.prev = _context2.next) {
+          case 0:
+            article = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].find({ name: ctx.query.name }).value();
 
-                        ctx.status = 200;
-                        ctx.body = article;
+            ctx.status = 200;
+            ctx.body = article;
 
-                    case 3:
-                    case 'end':
-                        return _context2.stop();
-                }
-            }
-        }, _callee2, this);
-    }));
+          case 3:
+          case 'end':
+            return _context2.stop();
+        }
+      }
+    }, _callee2, this);
+  }));
 
-    return function find(_x3, _x4) {
-        return _ref2.apply(this, arguments);
-    };
+  return function find(_x3, _x4) {
+    return _ref2.apply(this, arguments);
+  };
 }();
 
 /***/ }),

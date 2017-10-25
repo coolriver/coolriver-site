@@ -15,5 +15,8 @@ export const mutations = {
       siteUv,
       pagePv
     };
+  },
+  updateRecentList(state, list) {
+    state.recentList = list;
   }
 };

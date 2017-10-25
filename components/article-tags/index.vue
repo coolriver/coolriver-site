@@ -1,36 +1,28 @@
 <template>
   <div class="article-tag-list">
     <v-icon class="light-blue--text text--lighten-2">mdi-bookmark</v-icon>
-    <span class="card card--hover" v-for="(tag, index) in tags" :key="index">{{tag}}</span>
+    <article-tag class="card card--hover" v-for="(tag, index) in tags" :key="index" :tag="tag"></article-tag>
   </div>
 </template>
 
 <script>
+import ArticleTag from '../article-tag';
+
 export default {
   name: 'article-tags',
   props: {
     tags: Array
+  },
+  components: {
+    ArticleTag,
   }
 }
 </script>
 
 <style lang="scss" scoped>
-$tagSpace : 10px;
 
 .article-tag-list {
   background: #fff;
-
-  span {
-    margin-left: $tagSpace;
-    display: inline-block;
-    border-radius: 3px;
-    padding: 2px 10px;
-    color: #aaa;
-
-    &:first-of-type {
-      margin-left: $tagSpace - 5;
-    }
-  }
 }
 </style>
 
