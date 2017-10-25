@@ -1,5 +1,5 @@
 <template>
-  <v-app id="example-2" light v-scroll="onScrollThottle()">
+  <v-app id="example-2" light>
     <v-toolbar class="cyan darken" dark fixed>
       <nuxt-link to="/">
         <v-toolbar-title class="home-title">coolriver</v-toolbar-title>
@@ -44,26 +44,19 @@
       <span class="white--text">Copyright © 2017 coolriver</span>
       <span class="white--text ml-3 hidden-xs-only">粤ICP备16047967号-1</span>
     </v-footer>
-    <v-fab-transition>
-      <v-btn fixed dark floating fab bottom right class="red scroll-btn" v-show="showSrollTop" @click="scrollTop">
-        <v-icon>mdi-chevron-up</v-icon>
-      </v-btn>
-    </v-fab-transition>
+    <scroll-top-btn></scroll-top-btn>
   </v-app>
 </template>
 
 <script>
 import api from '../libs/api';
 import { mapState } from 'vuex';
-import _ from 'lodash';
 import zhanZhang from '../libs/zhanzhang';
 import { RECENT_ARTICLE_COUNT } from '../config/constant';
 import ArticleRecent from '../components/article-recent';
+import ScrollTopBtn from '../components/scroll-top-btn';
 
 const chilunSvg = require('../assets/image/chilun.svg');
-
-const SCROLL_TOP = 100;
-let doc = null;
 
 export default {
   name: 'default-layout',
@@ -71,34 +64,15 @@ export default {
     return {
       drawer: true,
       chilunSvg,
-      showSrollTop: false
     };
   },
   created() {
-    /*     api.article.getList({ limit: RECENT_ARTICLE_COUNT })
-      .then(list => {
-        this.$store.commit('updateRecentList', list);
-      }); */
+
   },
   computed: {
     ...mapState(['pvUv', 'recentList'])
   },
   methods: {
-    onScroll(e) {
-      const top = (window.pageYOffset || doc.scrollTop) - (doc.clientTop || 0);
-
-      if (top > SCROLL_TOP) {
-        this.showSrollTop = true;
-      } else {
-        this.showSrollTop = false;
-      }
-    },
-    scrollTop() {
-      window.scroll(0, 0);
-    },
-    onScrollThottle() {
-      return _.throttle(this.onScroll.bind(this), 100);
-    },
     fetchRecentArticle() {
       api.article.getList({ limit: RECENT_ARTICLE_COUNT }).then(list => {
         this.$store.commit('updateRecentList', list);
@@ -107,11 +81,11 @@ export default {
   },
   mounted() {
     this.fetchRecentArticle();
-    doc = document.documentElement;
     zhanZhang();
   },
   components: {
-    ArticleRecent
+    ArticleRecent,
+    ScrollTopBtn
   }
 };
 </script>
