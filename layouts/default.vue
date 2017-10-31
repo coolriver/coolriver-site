@@ -51,14 +51,15 @@
 <script>
 import api from '../libs/api';
 import { mapState } from 'vuex';
-import zhanZhang from '../libs/zhanzhang';
 import { RECENT_ARTICLE_COUNT } from '../config/constant';
 import ArticleRecent from '../components/article-recent';
 import ScrollTopBtn from '../components/scroll-top-btn';
+import zhanZhang from '../libs/mixins/imgPreview';
 
 const chilunSvg = require('../assets/image/chilun.svg');
 
 export default {
+  mixins: [zhanZhang],
   name: 'default-layout',
   data() {
     return {
@@ -81,7 +82,6 @@ export default {
   },
   mounted() {
     this.fetchRecentArticle();
-    zhanZhang();
   },
   components: {
     ArticleRecent,

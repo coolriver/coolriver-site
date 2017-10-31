@@ -8,7 +8,7 @@
     "f89ba2d89e5710c9ff4d03829963cf2d.svg",
     "fonts/materialdesignicons-webfont.3bd364e.eot",
     "pages\\articles\\_article.25d44aeb01cf5972264d.js",
-    "layouts\\default.e94e4e1c185188bd8e63.js",
+    "layouts\\default.156cafcdf0b4f04f875f.js",
     "pages\\index.4abb0a087cb11f66e161.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
     "app.d129d87c17637eadd1e9.js",
@@ -17,10 +17,10 @@
     "7.69f05d329327ff7fdcf5.js",
     "8.81f69a099f8620ffe425.js",
     "a4025e1d81e20b72dbff75f4f6d2b500.svg",
-    "manifest.a1eaf5e815e2e4be39c2.js",
+    "manifest.c31ce6791a134e271e88.js",
     "LICENSES",
     "pages\\articles\\_article.25d44aeb01cf5972264d.js.map",
-    "layouts\\default.e94e4e1c185188bd8e63.js.map",
+    "layouts\\default.156cafcdf0b4f04f875f.js.map",
     "pages\\index.4abb0a087cb11f66e161.js.map",
     "pages\\about.1c0ff33f45b31dbb9ff3.js.map",
     "app.d129d87c17637eadd1e9.js.map",
@@ -29,19 +29,19 @@
     "7.69f05d329327ff7fdcf5.js.map",
     "8.81f69a099f8620ffe425.js.map",
     "9.b53bb8eb9878f6572639.js.map",
-    "manifest.a1eaf5e815e2e4be39c2.js.map",
+    "manifest.c31ce6791a134e271e88.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.a1eaf5e815e2e4be39c2.js",
+    "manifest.c31ce6791a134e271e88.js",
     "common.370e0798fe0cad29d102.js",
     "app.d129d87c17637eadd1e9.js"
   ],
   "async": [
     "9.b53bb8eb9878f6572639.js",
     "pages\\articles\\_article.25d44aeb01cf5972264d.js",
-    "layouts\\default.e94e4e1c185188bd8e63.js",
+    "layouts\\default.156cafcdf0b4f04f875f.js",
     "pages\\index.4abb0a087cb11f66e161.js",
     "pages\\about.1c0ff33f45b31dbb9ff3.js",
     "6.c231a1f9d72b6d19487b.js",
@@ -673,10 +673,6 @@
       5,
       5
     ],
-    "cfbdedce": [
-      6,
-      18
-    ],
     "507456cd": [
       10,
       22,
@@ -751,10 +747,6 @@
       4,
       5,
       5
-    ],
-    "8f3f96a4": [
-      6,
-      18
     ],
     "3861a5d3": [
       10,
@@ -1720,9 +1712,9 @@
       5,
       5
     ],
-    "4fff276f": [
-      8,
-      20
+    "41eb8e4c": [
+      9,
+      21
     ],
     "629e580d": [
       11,
@@ -1812,9 +1804,9 @@
       5,
       5
     ],
-    "41eb8e4c": [
-      9,
-      21
+    "4fff276f": [
+      8,
+      20
     ],
     "7aaf1d72": [
       14,
@@ -1865,11 +1857,6 @@
       5
     ],
     "383d520d": [
-      7,
-      19,
-      15
-    ],
-    "76a32677": [
       7,
       19,
       15
