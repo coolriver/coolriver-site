@@ -12,6 +12,7 @@
 export default {
   article: {
     getList: '/api/articles',
-    getArticle: '/api/article'
+    getArticle: '/api/article',
+    getTags: '/api/tags',
   }
 };

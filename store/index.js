@@ -18,5 +18,8 @@ export const mutations = {
   },
   updateRecentList(state, list) {
     state.recentList = list;
+  },
+  updateTagList(state, list) {
+    state.tagList = list;
   }
 };

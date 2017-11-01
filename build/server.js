@@ -332,6 +332,7 @@ var router = new __WEBPACK_IMPORTED_MODULE_0_koa_router___default.a();
 function setupRouter(app) {
   router.get('/api/articles', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["b" /* getList */]);
   router.get('/api/article', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["a" /* find */]);
+  router.get('/api/tags', __WEBPACK_IMPORTED_MODULE_1__controllers_article__["c" /* getTags */]);
 
   app.use(router.routes());
 };
@@ -349,6 +350,7 @@ module.exports = require("koa-router");
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return find; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getTags; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__ = __webpack_require__(18);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_index__ = __webpack_require__(3);
@@ -414,6 +416,38 @@ var find = function () {
 
   return function find(_x3, _x4) {
     return _ref2.apply(this, arguments);
+  };
+}();
+
+var getTags = function () {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
+    var articles, tags, tagsUniq;
+    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+      while (1) {
+        switch (_context3.prev = _context3.next) {
+          case 0:
+            articles = __WEBPACK_IMPORTED_MODULE_1__models_index__["a" /* articleModel */].getList().value();
+            tags = articles.map(function (article) {
+              return article.tags;
+            }).reduce(function (result, cur) {
+              return result.concat(cur);
+            }, []);
+            tagsUniq = Array.from(new Set(tags));
+
+
+            ctx.status = 200;
+            ctx.body = tagsUniq;
+
+          case 5:
+          case 'end':
+            return _context3.stop();
+        }
+      }
+    }, _callee3, this);
+  }));
+
+  return function getTags(_x5, _x6) {
+    return _ref3.apply(this, arguments);
   };
 }();
 

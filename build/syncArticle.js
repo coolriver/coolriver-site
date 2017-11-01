@@ -293,8 +293,11 @@ function parseTags(content) {
   var TAG_REG = /^<!--TAG\s*(.*)\s*\/TAG-->$/m;
   var matches = content.match(TAG_REG) || [];
   var tagsStr = matches[1];
+  var tags = tagsStr ? tagsStr.split(';') : [];
 
-  return tagsStr ? tagsStr.split(';') : [];
+  return tags.map(function (tag) {
+    return tag.trim();
+  });
 };
 
 /**

@@ -6,7 +6,7 @@
       "desc": "对于一个web前端开发者，chrome浏览器是一个工作，学习和生活的必备工具。除了chrome本身的基本能力（控制台等）外，能大幅提高这个神器的使用体验的是，可扩展能力（插件）以及丰富的插件生态。",
       "tags": [
         "chrome",
-        "plugin "
+        "plugin"
       ],
       "name": "chrome-plugins-diy",
       "id": "ByKJY3u2b",
@@ -18,7 +18,7 @@
       "desc": "产品需求来啦：点击页面上某个东西，要在新窗口中打开一个页面，注意！要在新窗口中打开。你呵呵一笑，太简单了：",
       "tags": [
         "安全",
-        "性能 "
+        "性能"
       ],
       "name": "wtf-target-blank",
       "id": "SJxYJFn_2-",
@@ -29,7 +29,7 @@
       "img": "/image/default-article-img.jpg",
       "desc": "之前[关于service worker介绍的文章](http://imweb.io/topic/56592b8a823633e31839fc01)中，这样描述了浏览器环境下Javascript环境：\"*每个页面的javascript运行主线程都是一个Boss*\"、\"*Boss很厉害，在页面上指点江山，呼风唤雨。但他有个局限：同一时刻只做一件事（单线程）*\"。",
       "tags": [
-        "javascript "
+        "javascript"
       ],
       "name": "settimeout-story",
       "id": "rkIc1i-ab",
@@ -41,7 +41,7 @@
       "desc": "Service的意思是服务，Worker的意思是工人，那么Service Worker的意思就是服务员。这个员工是2014年6月HTML5新招的实习生，目前在试用中。在此之前，已经有一位老员工，它叫Web Worker。那么问题来了，Boss是谁？Boss就是浏览器。准确来说，每个页面的javascript运行主线程都是一个Boss。",
       "tags": [
         "javascript",
-        "service worker "
+        "service worker"
       ],
       "name": "service-worker-guard",
       "id": "S1Q8YDm6b",

@@ -20,3 +20,13 @@ export async function find(ctx, next) {
   ctx.status = 200;
   ctx.body = article;
 }
+
+export async function getTags (ctx, next) {
+  const articles = articleModel.getList().value();
+  const tags = articles.map(article => article.tags)
+    .reduce((result, cur) => result.concat(cur), []);
+  const tagsUniq = Array.from(new Set(tags));
+
+  ctx.status = 200;
+  ctx.body = tagsUniq;
+}

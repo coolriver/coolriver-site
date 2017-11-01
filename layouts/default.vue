@@ -16,14 +16,7 @@
           <v-flex xs12 md3 order-xs3 order-md4 class="aside">
             <v-layout row wrap>
               <article-recent></article-recent>
-              <v-flex xs12>
-                <v-card hover>
-                  <v-card-title primary class="title">文章标签</v-card-title>
-                  <v-card-text>
-                    别急，正在开发中。。
-                  </v-card-text>
-                </v-card>
-              </v-flex>
+              <article-all-tags></article-all-tags>
             </v-layout>
           </v-flex>
         </v-layout>
@@ -53,6 +46,7 @@ import api from '../libs/api';
 import { mapState } from 'vuex';
 import { RECENT_ARTICLE_COUNT } from '../config/constant';
 import ArticleRecent from '../components/article-recent';
+import ArticleAllTags from '../components/article-all-tags';
 import ScrollTopBtn from '../components/scroll-top-btn';
 import zhanZhang from '../libs/mixins/imgPreview';
 
@@ -78,14 +72,21 @@ export default {
       api.article.getList({ limit: RECENT_ARTICLE_COUNT }).then(list => {
         this.$store.commit('updateRecentList', list);
       });
+    },
+    fetchTags() {
+      api.article.getTags().then(list => {
+        this.$store.commit('updateTagList', list);
+      });
     }
   },
   mounted() {
     this.fetchRecentArticle();
+    this.fetchTags();
   },
   components: {
     ArticleRecent,
-    ScrollTopBtn
+    ArticleAllTags,
+    ScrollTopBtn,
   }
 };
 </script>

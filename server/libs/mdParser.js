@@ -8,8 +8,9 @@ export function parseTags (content) {
   const TAG_REG = /^<!--TAG\s*(.*)\s*\/TAG-->$/m;
   const matches = content.match(TAG_REG) || [];
   const tagsStr = matches[1];
+  let tags = tagsStr ? tagsStr.split(';') : [];
 
-  return tagsStr ? tagsStr.split(';') : [];
+  return tags.map(tag => tag.trim());
 };
 
 /**
