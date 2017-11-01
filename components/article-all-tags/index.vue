@@ -47,7 +47,7 @@ export default {
 
     .article-tag-item {
       margin-bottom: 10px;
-      margin-left: 10px;
+      margin-left: 10px !important;
     }
   }
 }

@@ -5,6 +5,7 @@ Vue.use(Router)
 
 const _482afde0 = () => import('..\\pages\\index.vue' /* webpackChunkName: "pages\\index" */).then(m => m.default || m)
 const _2873231b = () => import('..\\pages\\about.vue' /* webpackChunkName: "pages\\about" */).then(m => m.default || m)
+const _a21e62d4 = () => import('..\\pages\\tags\\_tag.vue' /* webpackChunkName: "pages\\tags\\_tag" */).then(m => m.default || m)
 const _4bd453d4 = () => import('..\\pages\\articles\\_article.vue' /* webpackChunkName: "pages\\articles\\_article" */).then(m => m.default || m)
 
 
@@ -50,6 +51,11 @@ export function createRouter () {
 			path: "/about",
 			component: _2873231b,
 			name: "about"
+		},
+		{
+			path: "/tags/:tag?",
+			component: _a21e62d4,
+			name: "tags-tag"
 		},
 		{
 			path: "/articles/:article?",

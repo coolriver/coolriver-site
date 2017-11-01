@@ -44,3 +44,10 @@ export default {
 };
 </script>
 
+<style lang="scss" scoped>
+.btn--bottom {
+  bottom: 34px !important;
+}
+</style>
+
+
