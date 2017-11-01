@@ -1,0 +1,24 @@
+#!/bin/sh
+#
+# An example hook script to prepare a packed repository for use over
+# dumb transports.
+#
+# To enable this hook, rename this file to "post-update".
+
+#exec git update-server-info
+echo 'start receive hook.........'
+DIR_PROD=/data/site/coolriver/
+
+# 
+git --work-tree=${DIR_PROD} clean -fd
+git --work-tree=${DIR_PROD} checkout --force
+
+cd ${DIR_PROD}
+yarn
+ln -s /data/site/ssl/ server/ssl
+npm run serverBuild
+npm run syncData
+pm2 restart all
+
+echo 'end receive hook...........'
+
