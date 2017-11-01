@@ -1,7 +1,7 @@
 <template>
   <div class="article-tag-list">
     <v-icon class="light-blue--text text--lighten-2">mdi-bookmark</v-icon>
-    <article-tag class="card card--hover" v-for="(tag, index) in tags" :key="index" :tag="tag"></article-tag>
+    <article-tag v-for="(tag, index) in tags" :key="index" :tag="tag"></article-tag>
   </div>
 </template>
 
@@ -23,6 +23,10 @@ export default {
 
 .article-tag-list {
   background: #fff;
+
+  i {
+    margin-right: -5px;
+  }
 }
 </style>
 

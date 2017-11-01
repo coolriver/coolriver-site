@@ -362,13 +362,13 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 var getList = function () {
   var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
-    var _ctx$query, _ctx$query$limit, limit, _ctx$query$offset, offset, list;
+    var _ctx$query, _ctx$query$limit, limit, _ctx$query$offset, offset, tag, list;
 
     return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
-            _ctx$query = ctx.query, _ctx$query$limit = _ctx$query.limit, limit = _ctx$query$limit === undefined ? Number.MAX_SAFE_INTEGER : _ctx$query$limit, _ctx$query$offset = _ctx$query.offset, offset = _ctx$query$offset === undefined ? 0 : _ctx$query$offset;
+            _ctx$query = ctx.query, _ctx$query$limit = _ctx$query.limit, limit = _ctx$query$limit === undefined ? Number.MAX_SAFE_INTEGER : _ctx$query$limit, _ctx$query$offset = _ctx$query.offset, offset = _ctx$query$offset === undefined ? 0 : _ctx$query$offset, tag = _ctx$query.tag;
 
             limit = parseInt(limit, 10);
             offset = parseInt(offset, 10);
@@ -378,10 +378,18 @@ var getList = function () {
               return a.time > b.time ? -1 : 1;
             }).slice(offset, limit + offset).value();
 
+            // 有标签筛选条件
+
+            if (tag) {
+              list = list.filter(function (item) {
+                return item.tags.indexOf(tag) >= 0;
+              });
+            }
+
             ctx.status = 200;
             ctx.body = list;
 
-          case 6:
+          case 7:
           case 'end':
             return _context.stop();
         }

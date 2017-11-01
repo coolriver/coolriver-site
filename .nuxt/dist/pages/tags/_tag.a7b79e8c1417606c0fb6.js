@@ -1,2 +1,0 @@
-webpackJsonp([4],{Bt95:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r=n("kDMi"),l=n("VU/8"),u=l(null,r.a,null,null,null);t.default=u.exports},kDMi:function(e,t,n){"use strict";var r=function(){var e=this,t=e.$createElement;return(e._self._c||t)("p",[e._v("tag content")])},l=[],u={render:r,staticRenderFns:l};t.a=u}});
-//# sourceMappingURL=_tag.a7b79e8c1417606c0fb6.js.map

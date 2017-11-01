@@ -39,7 +39,6 @@ export default {
   async asyncData({ params, error, req }) {
     try {
       const { article } = params;
-      // const articleDataUrl = req ? `http://coolriver.net.cn/api/articles/${article}` : `/api/articles/${article}`;
       const [content, articleData] = await Promise.all([
         import(`../../markdown/${params.article}.md`),
         api.article.getArticle({ name: article })

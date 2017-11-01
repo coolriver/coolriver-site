@@ -4,7 +4,7 @@
     <h2>文章标签</h2>
     <v-progress-circular v-if="!tagList.length" indeterminate></v-progress-circular>
     <div class="article-all-tags-list" v-else>
-      <article-tag v-for="(tag, index) in tagList" :key="index" :tag="tag"></article-tag>
+      <article-tag enableLink v-for="(tag, index) in tagList" :key="index" :tag="tag"></article-tag>
     </div>
   </v-card>
 </v-flex>
@@ -44,11 +44,6 @@ export default {
   &-list {
     padding: 10px 15px 15px;
     margin: auto auto -10px -10px;
-
-    .article-tag-item {
-      margin-bottom: 10px;
-      margin-left: 10px !important;
-    }
   }
 }
 </style>

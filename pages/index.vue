@@ -8,7 +8,6 @@
 
 <script>
 import api from '../libs/api';
-import ArticleTags from '../components/article-tags';
 import ArticleCard from '../components/article-card';
 import { cardFlexLayout } from '../config/constant';
 
@@ -43,7 +42,6 @@ export default {
 
   },
   components: {
-    ArticleTags,
     ArticleCard,
   }
 };

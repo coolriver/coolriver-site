@@ -13,10 +13,15 @@
 </template>
 
 <script>
+import ArticleTags from '../article-tags';
+
 export default {
   name: 'article-card',
   props: {
     article: Object
+  },
+  components: {
+    ArticleTags,
   }
 };
 </script>
@@ -47,7 +52,7 @@ export default {
   }
 
   &-tags {
-    margin: 5px auto -5px -5px;
+    margin: 5px auto -10px -5px;
   }
 
   &:hover {
