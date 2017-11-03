@@ -46,6 +46,19 @@
       "name": "service-worker-guard",
       "id": "S1Q8YDm6b",
       "time": 1508239590951
+    },
+    {
+      "title": "HOC(高阶组件)在vue中的应用",
+      "img": "/image/default-article-img.jpg",
+      "desc": "HOC是Higher-Order Components(高阶组件)的简称。如果有人第一次看到这个名词，可能会觉得是一个什么高深的技术。  ",
+      "tags": [
+        "vue",
+        "react",
+        "组件"
+      ],
+      "name": "vue-mixin-hoc",
+      "id": "H1i6wsF0W",
+      "time": 1509594177030
     }
   ],
   "user": {},
