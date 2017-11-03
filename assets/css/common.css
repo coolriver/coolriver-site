@@ -6,3 +6,7 @@ a {
 ul {
   list-style: none
 }
+
+.hljs {
+  background: #282c34 !important;
+}

@@ -32,7 +32,7 @@ const sleep = function(time) {
   return new Promise(resolve => {
     setTimeout(resolve, time);
   });
-}
+};
 
 export default {
   mixins: [imgPreviewMixin],
@@ -47,7 +47,7 @@ export default {
       return {
         content,
         metaData: articleData || {},
-        env: req ? 'server' : 'client',
+        env: req ? 'server' : 'client'
       };
     } catch (e) {
       error({ statusCode: 404, message: 'article do not exist' });
@@ -56,11 +56,11 @@ export default {
   data() {
     return {
       content: '加载中。。。',
-      env: '',
-    }
+      env: ''
+    };
   },
   computed: {
-    ...(mapState(['pvUv'])),
+    ...mapState(['pvUv'])
   },
   head() {
     const { title, tags, img, desc } = this.metaData;
@@ -70,7 +70,7 @@ export default {
       meta: [
         { hid: 'description', name: 'description', content: desc },
         { hid: 'keywords', name: 'keywords', content: tags.join(',') },
-        { hid: 'shareimg', itemprop: 'image', content: img },
+        { hid: 'shareimg', itemprop: 'image', content: img }
       ]
     };
   },
@@ -94,10 +94,9 @@ export default {
   &-time {
     display: inline-block;
 
-    &>span {
+    & > span {
       vertical-align: middle;
       margin-left: 5px;
-      ;
     }
   }
 
@@ -106,7 +105,7 @@ export default {
     right: 20px;
     top: 5px;
 
-    &>span {
+    & > span {
       vertical-align: middle;
       margin-left: 5px;
     }
@@ -125,7 +124,7 @@ export default {
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       display: block;
       position: absolute;
       left: -20px;
@@ -138,10 +137,6 @@ export default {
   img {
     position: relative;
     cursor: zoom-in;
-  }
-
-  .hljs {
-    background: #282c34 !important;
   }
 }
 </style>

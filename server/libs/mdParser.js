@@ -36,7 +36,7 @@ export function parseDesc (content) {
  * @returns {String} 图片链接
  */
 export function parseImage (content) {
-  const IMG_REG = /!\[\]\(([^\(\)]+)\)/;
+  const IMG_REG = /!\[.*\]\(([^\(\)]+)\)/;
   const matches = content.match(IMG_REG) || [];
 
   return matches[1] || '/image/default-article-img.jpg';
