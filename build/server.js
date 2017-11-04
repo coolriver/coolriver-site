@@ -232,7 +232,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_koa___default.a();
 var host = process.env.HOST || '127.0.0.1';
-var port = process.env.PORT || 8000;
+var port = process.env.PORT || 80;
 
 // Import and Set Nuxt.js options
 var config = __webpack_require__(22);
