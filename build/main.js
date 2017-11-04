@@ -232,7 +232,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 var app = new __WEBPACK_IMPORTED_MODULE_0_koa___default.a();
 var host = process.env.HOST || '127.0.0.1';
-var port = process.env.PORT || 80;
+var port = process.env.PORT || 8000;
 
 // Import and Set Nuxt.js options
 var config = __webpack_require__(22);
@@ -351,8 +351,8 @@ module.exports = require("koa-router");
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "b", function() { return getList; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return find; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "c", function() { return getTags; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__ = __webpack_require__(18);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__models_index__ = __webpack_require__(3);
 
 
@@ -361,10 +361,10 @@ function _asyncToGenerator(fn) { return function () { var gen = fn.apply(this, a
 
 
 var getList = function () {
-  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
+  var _ref = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee(ctx, next) {
     var _ctx$query, _ctx$query$limit, limit, _ctx$query$offset, offset, tag, list;
 
-    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee$(_context) {
       while (1) {
         switch (_context.prev = _context.next) {
           case 0:
@@ -403,9 +403,9 @@ var getList = function () {
 }();
 
 var find = function () {
-  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
+  var _ref2 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee2(ctx, next) {
     var article;
-    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee2$(_context2) {
       while (1) {
         switch (_context2.prev = _context2.next) {
           case 0:
@@ -428,9 +428,9 @@ var find = function () {
 }();
 
 var getTags = function () {
-  var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
+  var _ref3 = _asyncToGenerator( /*#__PURE__*/__WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.mark(function _callee3(ctx, next) {
     var articles, tags, tagsUniq;
-    return __WEBPACK_IMPORTED_MODULE_0_E_testspace_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
+    return __WEBPACK_IMPORTED_MODULE_0_E_GitHub_coolriver_site_node_modules_babel_runtime_regenerator___default.a.wrap(function _callee3$(_context3) {
       while (1) {
         switch (_context3.prev = _context3.next) {
           case 0:
@@ -550,6 +550,9 @@ module.exports = {
   css: ['vuetify/dist/vuetify.css', '~assets/css/common.css', 'mdi/css/materialdesignicons.css', 'highlight.js/styles/atom-one-dark.css', 'github-markdown-css/github-markdown.css'],
   plugins: ['~plugins/vue-vuetify', {
     src: '~plugins/busuanzi',
+    ssr: false
+  }, {
+    src: '~plugins/baidutongji',
     ssr: false
   }, '~plugins/filter'],
   vendor: ['axios']

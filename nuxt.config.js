@@ -61,6 +61,10 @@ module.exports = {
       src: '~plugins/busuanzi',
       ssr: false
     },
+    {
+      src: '~plugins/baidutongji',
+      ssr: false
+    },
     '~plugins/filter',
   ],
   vendor: ['axios']
