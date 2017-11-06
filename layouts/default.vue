@@ -48,8 +48,7 @@ import { RECENT_ARTICLE_COUNT } from '../config/constant';
 import ArticleRecent from '../components/article-recent';
 import ArticleAllTags from '../components/article-all-tags';
 import ScrollTopBtn from '../components/scroll-top-btn';
-import zhanZhang from '../libs/mixins/imgPreview';
-
+import zhanZhang from '../libs/mixins/zhanzhang';
 const chilunSvg = require('../assets/image/chilun.svg');
 
 export default {
