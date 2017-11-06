@@ -1,7 +1,7 @@
 {
   "publicPath": "/_nuxt/",
   "all": [
-    "11.b9958358c6d97874cd16.js",
+    "11.cf61cc281df993ac86b5.js",
     "fonts/materialdesignicons-webfont.9b9f2c4.woff2",
     "fonts/materialdesignicons-webfont.eec7f0f.woff",
     "fonts/materialdesignicons-webfont.3ef6639.ttf",
@@ -19,7 +19,7 @@
     "9.7f5b9ea55c8ba7474802.js",
     "10.4e4f2d0c36565092b712.js",
     "a4025e1d81e20b72dbff75f4f6d2b500.svg",
-    "manifest.301dea5852064eb7b4e8.js",
+    "manifest.a4624456aa8061a67c26.js",
     "LICENSES",
     "layouts\\default.ae35f12f299e90b0b3bf.js.map",
     "pages\\articles\\_article.6caf284f68cc659b1815.js.map",
@@ -32,18 +32,18 @@
     "8.7d927d320ffa9bd03af4.js.map",
     "9.7f5b9ea55c8ba7474802.js.map",
     "10.4e4f2d0c36565092b712.js.map",
-    "11.b9958358c6d97874cd16.js.map",
-    "manifest.301dea5852064eb7b4e8.js.map",
+    "11.cf61cc281df993ac86b5.js.map",
+    "manifest.a4624456aa8061a67c26.js.map",
     "index.spa.html",
     "index.ssr.html"
   ],
   "initial": [
-    "manifest.301dea5852064eb7b4e8.js",
+    "manifest.a4624456aa8061a67c26.js",
     "common.dd13ec92257c645d9073.js",
     "app.648698bb0a440d637169.js"
   ],
   "async": [
-    "11.b9958358c6d97874cd16.js",
+    "11.cf61cc281df993ac86b5.js",
     "layouts\\default.ae35f12f299e90b0b3bf.js",
     "pages\\articles\\_article.6caf284f68cc659b1815.js",
     "pages\\tags\\_tag.210aab21a21db081d2f2.js",

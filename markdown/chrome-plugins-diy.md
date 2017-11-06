@@ -78,6 +78,7 @@ chrome extention支持的扩展点以及扩展功能很多，对于初学者不�
 >**期望**：有个插件，能够记录那些没看完，但又非常想继续看完的文章，即使关闭浏览器，换个浏览器，也能够获取到这些记录，并且打开再次打开文章时，能自动跳转到上次看到的位置。
 
 * 安装：[https://chrome.google.com/webstore/detail/progress-bookmark/ediaiaoabgoimfjpmegbhlhmpajmegoj](https://chrome.google.com/webstore/detail/progress-bookmark/ediaiaoabgoimfjpmegbhlhmpajmegoj)
+* 源码: [https://github.com/coolriver/smartBookmark](https://github.com/coolriver/smartBookmark)
 
 这个插件的主要功能是：
 1. 记录没有看完的文章/博客（在页面上通过右键菜单添加标记）,保存进度（按高度百分比）。
