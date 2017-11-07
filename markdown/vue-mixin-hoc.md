@@ -301,7 +301,7 @@ export default {
 
 ### React中的HOC现状
 其实最早在React中，也是使用mixin来实现组件功能复用的，[但从v0.13.0开始，React的ES6 class组件写法中就不支持mixin了](https://reactjs.org/blog/2015/01/27/react-v0.13.0-beta-1.html)。这应该算是比较大的特性调整了。在此之后，已经使用了React的项目，可以继续使用`React.createClass`定义组件的方式来继续使用mixin，如果要使用ES6 class并且实现同样的组件复用，就必须使用HOC了。  
-React为什么做了这个决定呢？人家不是没事搞事情，而是有原因的。官方博客专门发文列举mixin可能带来的一些问题: [mixin Considered Harmful](https://reactjs.org/blog/2016/07/13/mixin-considered-harmful.html)。这篇文章里结合实际例子列举了mixin在React中可能带来的几个问题，并且给出了mixin迁移到HOC的一些指导。原文是英文，并且篇幅较长，所以这里简单地把文章里提到的mixin可能带来的几个问题列举一下: 
+React为什么做了这个决定呢？人家不是没事搞事情，而是有原因的。官方博客专门发文列举mixin可能带来的一些问题: [mixin Considered Harmful](https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html)。这篇文章里结合实际例子列举了mixin在React中可能带来的几个问题，并且给出了mixin迁移到HOC的一些指导。原文是英文，并且篇幅较长，所以这里简单地把文章里提到的mixin可能带来的几个问题列举一下: 
 1. mixin会导致依赖不明确  
   mixin会调用组件内部方法/数据，组件会调用mixin方法/数据, 无法保证双方方法稳定存在.  
   多个mixin同时作用时，依赖关系对于被mixin的组件来说会更困惑
