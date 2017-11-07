@@ -45,17 +45,17 @@ setTimeout这个方法相信很多初学者都有过误解：让JS从现在开�
 
 #### 3.1 替换setInterval来实现重复定时
 setTimeout有个哥哥：setInterval。他哥看起来叼叼的，可以循环地每隔一个delay就向异步任务队列中添加一个任务。实际上setInterval用起来真地顺滑吗？以下YY一段setTimeout表哥的对话：
->  setTimeout： 欧妮桑
->  setInterval：纳泥？
->  setTimeout：我发现你可能有bug！
->  setInterval：我愚蠢的弟弟啊。。肯定是你使用的方法不对！
->  setTimeout：考虑到JS运行环境的特点，你的定时方法可能会连续执行，之间没有预期的间隔。
->   setInterval：Too young too simple! 你是说JS主线程的步同任务执行时间很长，并且异步队列中只有我在往其中添加任务，导致我在异步队列中重复添加的任务没有及时被执行，然后JS主线程空闲后，我添加的多个任务就会连续执行，是吗？
->  setTimeout：其实我想说的是。。。
->  setInterval：机智的为兄早就料到了这一点，于是我在往异步队列中添加任务的时候，特意检测了队列中是否已经有了我之前添加的任务，如果有的话，为兄就不再重复添加。
->  setTimeout：你说的那个检测机制我知道，我想说的是，当JS主线程中正在执行你添加的任务，如果此时异步任务队列为空，你再向队列中添加异步任务时，JS主线程执行完你上次添加的任务，会立刻执行你这次添加的任务。
->  setInterval：。。。。这是没办法的啊，我只能检测队列中的任务，没法检测正在执行的任务。You can you up?
->  setTimeout：请看下面代码：
+>  setTimeout： 欧妮桑  
+>  setInterval：纳泥？  
+>  setTimeout：我发现你可能有bug！  
+>  setInterval：我愚蠢的弟弟啊。。肯定是你使用的方法不对！  
+>  setTimeout：考虑到JS运行环境的特点，你的定时方法可能会连续执行，之间没有预期的间隔。  
+>   setInterval：Too young too simple! 你是说JS主线程的步同任务执行时间很长，并且异步队列中只有我在往其中添加任务，导致我在异步队列中重复添加的任务没有及时被执行，然后JS主线程空闲后，我添加的多个任务就会连续执行，是吗？  
+>  setTimeout：其实我想说的是。。。  
+>  setInterval：机智的为兄早就料到了这一点，于是我在往异步队列中添加任务的时候，特意检测了队列中是否已经有了我之前添加的任务，如果有的话，为兄就不再重复添加。  
+>  setTimeout：你说的那个检测机制我知道，我想说的是，当JS主线程中正在执行你添加的任务，如果此时异步任务队列为空，你再向队列中添加异步任务时，JS主线程执行完你上次添加的任务，会立刻执行你这次添加的任务。  
+>  setInterval：。。。。这是没办法的啊，我只能检测队列中的任务，没法检测正在执行的任务。You can you up?  
+>  setTimeout：请看下面代码：  
 
 ```javascript
 setTimeout(function() {
@@ -64,7 +64,7 @@ setTimeout(function() {
 }, 100);
 ```
 
->setInterval： （捂眼。。。）好亮的代码！你赢了...
+>setInterval： （捂眼。。。）好亮的代码！你赢了...  
 
 使用以上setTimeout链式调用的方式，可以保证在下一次定时器代码执行之前，至少要等待指定的时间间隔，避免连续的运行。
 

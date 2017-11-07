@@ -7,7 +7,7 @@
       <v-spacer></v-spacer>
     </v-toolbar>
     <main>
-      <embed class="svg-bg" :src="chilunSvg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" />
+      <!-- <embed class="svg-bg" :src="chilunSvg" type="image/svg+xml" pluginspage="http://www.adobe.com/svg/viewer/install/" /> -->
       <v-container grid-list-md>
         <v-layout row wrap>
           <v-flex xs12 md9 order-xs2 order-md3>
@@ -57,12 +57,10 @@ export default {
   data() {
     return {
       drawer: true,
-      chilunSvg,
+      chilunSvg
     };
   },
-  created() {
-
-  },
+  created() {},
   computed: {
     ...mapState(['pvUv', 'recentList'])
   },
@@ -85,7 +83,7 @@ export default {
   components: {
     ArticleRecent,
     ArticleAllTags,
-    ScrollTopBtn,
+    ScrollTopBtn
   }
 };
 </script>
@@ -102,7 +100,7 @@ export default {
 }
 
 .svg-bg {
-  position: fixed;
+  position: absolute;
   z-index: 0;
 }
 

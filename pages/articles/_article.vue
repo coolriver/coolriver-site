@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="article card">
     <!-- <h1>{{env}}</h1> -->
     <!-- <v-icon>mdi-bookmark</v-icon> -->
     <article-tags class="article-tags" :tags="metaData.tags"></article-tags>
