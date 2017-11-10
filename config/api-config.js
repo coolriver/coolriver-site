@@ -1,6 +1,6 @@
 
 export default {
-  baseUrl: typeof document === 'undefined' ? 'http://127.0.0.1' : '',
+  baseUrl: typeof document === 'undefined' ? 'https://coolriver.net.cn' : '',
   timeout: 1000 * 30,
   method: 'get',
 };
