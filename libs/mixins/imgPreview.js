@@ -2,6 +2,8 @@
  * 文章内容图片点击预览mixin
  */
 import { bindEvent, unbindEvent } from '../event';
+import _ from 'lodash';
+_.debounce
 
 let docElem = null;
 let curImg = null;
@@ -73,6 +75,9 @@ function unpreviewImg() {
   }
 }
 
+// window滚动时，加上debunce
+const throttleScrollHandle = _.throttle(unpreviewImg, 100);
+
 /**
  * 添加preview背景layout
  */
@@ -127,12 +132,12 @@ export default {
     windowWidth = Math.max(document.documentElement.clientWidth, window.innerWidth || 0);
     windowHeight = Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
     bindEvent(docElem, 'click', previewClickHandle);
-    bindEvent(window, 'scroll', unpreviewImg);
+    bindEvent(window, 'scroll', throttleScrollHandle);
   },
   destroyed() {
     console.log('mixin destroyed');
     unbindEvent(docElem, 'click', previewClickHandle);
-    unbindEvent(window, 'scroll', unpreviewImg);
+    unbindEvent(window, 'scroll', throttleScrollHandle);
     removeLayout();
     docElem = null;
     curImg = null;

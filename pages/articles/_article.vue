@@ -25,6 +25,7 @@ import { mapState } from 'vuex';
 import ArticleTags from '../../components/article-tags';
 import ChangyanComments from '../../components/changyan-comments';
 import imgPreviewMixin from '../../libs/mixins/imgPreview';
+import lazyloadIframeMixin from '../../libs/mixins/lazyloadIframe';
 
 let interval = null;
 
@@ -35,7 +36,7 @@ const sleep = function(time) {
 };
 
 export default {
-  mixins: [imgPreviewMixin],
+  mixins: [imgPreviewMixin, lazyloadIframeMixin],
   async asyncData({ params, error, req }) {
     try {
       const { article } = params;
@@ -63,7 +64,7 @@ export default {
     ...mapState(['pvUv'])
   },
   head() {
-    const { title, tags, img, desc } = this.metaData;
+    const { title, tags = [], img, desc } = this.metaData;
 
     return {
       title,
