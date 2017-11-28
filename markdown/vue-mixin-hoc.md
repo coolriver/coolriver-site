@@ -165,7 +165,7 @@ export default {
 注意看上面代码的最后一行注释。我们希望把权限验证放到mixin中，但问题是不同页面所需要的权限是不一样的啊，无法将`RIGHT_PAGE_1`之类的具体权限写死在mixin中。怎么办呢？机智的你应该可以想到，用函数包一层啊:  
 `right-mixin.js`  
 ```javascript
-export default rightType => { // rightType作为参数传入，返回特定mixin
+export default rightType => ({ // rightType作为参数传入，返回特定mixin
   computed: {
     hasRight() { // 判断用户是否有权限进入本页面的计算属性
       // 这里的user是之前在app中通过接口返回注入store的用户信息
@@ -173,7 +173,7 @@ export default rightType => { // rightType作为参数传入，返回特定mixin
       return rightList.indexOf(rightType); // 问题解决，美滋滋
     }
   }
-}
+})
 ``` 
 上面的所说的 `用函数包一层`，听起来好low是吧？我们来给这种方式起个高逼格一点的名字吧，我们称上面的方式为 `高阶mixin`。是不是瞬间听起来不一样了？  
 ![mark](http://oxjqfafek.bkt.clouddn.com/blog/171103/gf5l9b79Il.jpg?imageslim)   
@@ -237,7 +237,7 @@ export default {
 ```javascript
 import NoRightTips from './no-right-tips';
 
-export default (Comp, rightType) => {
+export default (Comp, rightType) => ({
   components: {
     Comp,
     NoRightTips,
@@ -251,7 +251,7 @@ export default (Comp, rightType) => {
   render(h) {
     return this.hasRight ? h(Comp, {}) : h(NoRightTips, {});
   }
-}
+})
 ```  
 
 接下来去掉页面组件中已经提取到高阶组件中的部分逻辑:  
