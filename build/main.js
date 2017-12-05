@@ -202,11 +202,13 @@ module.exports = require("shortid");
 module.exports = {
   dev: {
     host: '127.0.0.1',
-    port: 8880
+    port: 8880,
+    protocal: 'http'
   },
   prod: {
-    host: '127.0.0.1',
-    port: 80
+    host: 'coolriver.net.cn',
+    port: 80,
+    protocal: 'https'
   }
 };
 
@@ -529,7 +531,7 @@ module.exports = require("koa2-cors");
 
 var siteConf = __webpack_require__(9);
 
-var ssrHost =  true ? 'http://' + siteConf.prod.host + ':' + siteConf.prod.port : 'http://' + siteConf.dev.host + ':' + siteConf.dev.port;
+var ssrHost =  true ? siteConf.prod.protocal + '://' + siteConf.prod.host : siteConf.dev.protocal + '://' + siteConf.dev.host + ':' + siteConf.dev.port;
 
 console.log(ssrHost);
 

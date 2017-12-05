@@ -1,8 +1,8 @@
 var siteConf = require('./config/site');
 
 var ssrHost = process.env.NODE_ENV === 'production' ?
-  `http://${siteConf.prod.host}:${siteConf.prod.port}` :
-  `http://${siteConf.dev.host}:${siteConf.dev.port}`;
+  `${siteConf.prod.protocal}://${siteConf.prod.host}` :
+  `${siteConf.dev.protocal}://${siteConf.dev.host}:${siteConf.dev.port}`;
 
 console.log(ssrHost);
 
