@@ -9,8 +9,8 @@
     "serverDev": "cross-env BACKPACK_ENTRY=server backpack dev",
     "syncArticle": "cross-env BACKPACK_ENTRY=sync-article backpack dev",
     "serverBuild": "backpack build",
-    "dev": "nuxt",
-    "build": "nuxt build && backpack build",
+    "dev": "cross-env BACKPACK_ENTRY=server backpack dev",
+    "build": "cross-env NODE_ENV=production nuxt build && backpack build",
     "start": "nuxt start",
     "generate": "nuxt generate"
   },
@@ -48,6 +48,7 @@
     "css-loader": "^0.28.7",
     "node-sass": "^4.5.3",
     "sass-loader": "^6.0.6",
+    "string-replace-loader": "^1.3.0",
     "svg-url-loader": "^2.2.0",
     "vue-style-loader": "^3.0.3",
     "walk": "^2.3.9"

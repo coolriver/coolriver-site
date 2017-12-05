@@ -1,3 +1,11 @@
+var siteConf = require('./config/site');
+
+var ssrHost = process.env.NODE_ENV === 'production' ?
+  `http://${siteConf.prod.host}:${siteConf.prod.port}` :
+  `http://${siteConf.dev.host}:${siteConf.dev.port}`;
+
+console.log(ssrHost);
+
 module.exports = {
   head: {
     meta: [
@@ -33,7 +41,7 @@ module.exports = {
 
       imageLoaderConf.test = /\.(png|jpe?g|gif)$/;
 
-      config.module.rules = config.module.rules.concat([
+      config.module.rules = [
         {
           test: /\.md$/,
           loaders: ['raw-loader', 'markdown-code-highlight-loader']
@@ -44,8 +52,16 @@ module.exports = {
           options: {
             limit: 1000
           }
+        },
+        {
+          test: /api-config\.js$/,
+          loader: 'string-replace-loader',
+          query: {
+            search: '__HOST_PLACE_HOLDER__',
+            replace: ssrHost,
+          }
         }
-      ]);
+      ].concat(config.module.rules);
     }
   },
   css: [

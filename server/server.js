@@ -9,20 +9,21 @@ import { Nuxt, Builder } from 'nuxt';
 import { DB } from './db/index';
 import setupRouter from './router/router';
 import setupCors from './libs/cors';
+import siteConf from '../config/site';
 
 const app = new Koa();
-const host = process.env.HOST || '127.0.0.1';
-let port = process.env.PORT || 80;
-
 // Import and Set Nuxt.js options
 let config = require('../nuxt.config.js');
 config.dev = !(app.env === 'production');
+
+const host = config.dev ? siteConf.dev.host : siteConf.prod.host;
+let port = config.dev ? siteConf.dev.port : siteConf.prod.port;
 
 // 正式环境下启用https
 if (!config.dev) {
   console.log('enable https');
   app.use(enforceHttps());
-  port = 80;
+  // port = 80;
 }
 
 // Instantiate nuxt.js
