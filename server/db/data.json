@@ -70,6 +70,19 @@
       "name": "frontend-online-code-play",
       "id": "BJclBcb1f",
       "time": 1510214887093
+    },
+    {
+      "title": "翻译: await vs return vs return await",
+      "img": "http://oxjqfafek.bkt.clouddn.com/blog/171219/IDBFa4iifk.jpg?imageslim",
+      "desc": "受够了回调地狱，又觉得Promise用起来不过瘾，想用一下更加优雅的async/await吗？在使用之前可以关注一下有哪些使用方式和坑。已经使用了async/await的同学也可以看一下有没有遇到过类似的坑。另外，本文是译文，喜欢看英文的同学可以直接去下文原文链接去看。",
+      "tags": [
+        "Promise",
+        "await",
+        "async"
+      ],
+      "name": "await-vs-return-vs-return-await",
+      "id": "r1U9MxLzM",
+      "time": 1513648705820
     }
   ],
   "user": {},
